@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# *****************************************************
+# Uninstall the lightstrands desktop widget from the
+# "Add or Manage Widgets" panel.
+
+# Color styling.
+COLOR_RED='\e[0;31m'
+COLOR_GREEN='\e[1;32m'
+COLOR_YELLOW='\e[1;33m'
+COLOR_BLUE='\e[0;34m'
+COLOR_NORMAL='\033[0m'
+
+
+# See if widget has active desktop instances running.
+cat ~/.config/plasma-org.kde.plasma.desktop-appletsrc \
+    | grep lightstrands 1>/dev/null 2>/dev/null
+EXISTS_AS_DESKTOP_ITEM=$?
+
+# Result 0 says it's there.
+if [[ $EXISTS_AS_DESKTOP_ITEM == "0" ]]; then
+    echo -e "${COLOR_RED}"
+    echo "A Lightstrands widget is active on your desktop."
+    echo -e "${COLOR_YELLOW}"
+    echo "   You must remove it manually, before you can"
+    echo "uninstall it from the Widget Panel."
+    echo -e "${COLOR_NORMAL}"
+    exit 1
+fi
+
+# Uninstall plasmoid between plasmashell stop/starts.
+
+    # Try to uninstall the package.
+    kpackagetool6 -t Plasma/Applet -r inc.skyrmion.lightstrands \
+        1>/dev/null 2>/dev/null
+    UNINSTALLED=$?
+
+    # Report results.
+    if [[ "$UNINSTALLED" == "0" ]]; then
+        echo ""
+        echo -e "${COLOR_YELLOW}""Stopping Plasmashell."
+        kquitapp6 plasmashell 1>/dev/null
+        echo -e "${COLOR_YELLOW}""Restarting Plasmashell."
+        kstart plasmashell
+        echo ""
+        echo -e "${COLOR_GREEN}""Lightstrands now uninstalled."
+        echo -e "${COLOR_NORMAL}"
+    else
+        echo ""
+        echo -e "${COLOR_YELLOW}""Lightstrands didn't require uninstall."
+        echo -e "${COLOR_NORMAL}"
+    fi
+

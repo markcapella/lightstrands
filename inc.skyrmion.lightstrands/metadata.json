@@ -1,0 +1,28 @@
+
+{
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0",
+
+    "Keyword": "xmas holiday light strand",
+
+    "KPlugin": {
+        "Id": "inc.skyrmion.lightstrands",
+        "Icon": "games-hint",
+        "Category": "Fun and Games",
+
+        "Name": "LightStrands",
+        "Description":
+            "A twinkling, stretchable Holidays Lights Strand.",
+        "Version": "2025-06-16",
+
+        "Authors": [{
+             "Email": "markjamescapella@proton.me",
+             "Name": "Mark Capella"
+         }],
+
+        "Website":
+            "https://github.com/markcapella/Lightstrands",
+        "BugReportUrl":
+            "https://github.com/markcapella/lightstrands/issues/new"
+    }
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+
+    <!-- Module initialization state. -->
+    <entry name="isModuleInitialized" type="Bool">
+        <default>false</default>
+    </entry>
+
+    <entry name="initialOrientation" type="String">
+        <default>horizontal</default>
+    </entry>
+
+    <entry name="initialWidth" type="Int">
+      <default>500</default>
+    </entry>
+    <entry name="initialHeight" type="Int">
+      <default>75</default>
+    </entry>
+
+    <entry name="resizingCancelTimeMS" type="Int">
+      <default>75</default>
+    </entry>
+
+    <!-- Bulb Selection prefs. -->
+    <entry name="chosenBulb" type="Int">
+      <default>0</default>
+    </entry>
+
+    <!-- Bulb Spacing prefs. -->
+    <entry name="bulbSpaceWidthSlider" type="Int">
+      <default>15</default>
+    </entry>
+
+    <!-- Bulb Colors prefs. -->
+    <entry name="showLightRed" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showLightLime" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showLightPurple" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showLightCyan" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showLightGreen" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showLightOrange" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showLightBlue" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showLightPink" type="Bool">
+      <default>false</default>
+    </entry>
+
+    <!-- App constants. -->
+    <entry name="bulbAlternatingOffset" type="Int">
+      <default>15</default>
+    </entry>
+
+    <entry name="colorBoxWidth" type="Int">
+      <default>43</default>
+    </entry>
+    <entry name="colorBoxHeight" type="Int">
+      <default>33</default>
+    </entry>
+    <entry name="colorBoxRadius" type="Int">
+      <default>10</default>
+    </entry>
+
+    <entry name="lightColorRed" type="Color">
+        <default>#B00000</default>
+    </entry>
+    <entry name="lightColorLime" type="Color">
+        <default>#B0ff00</default>
+    </entry>
+    <entry name="lightColorPurple" type="Color">
+        <default>#B000ff</default>
+    </entry>
+    <entry name="lightColorCyan" type="Color">
+        <default>#B0ffff</default>
+    </entry>
+    <entry name="lightColorGreen" type="Color">
+        <default>#00B000</default>
+    </entry>
+    <entry name="lightColorOrange" type="Color">
+        <default>#ffB000</default>
+    </entry>
+    <entry name="lightColorBlue" type="Color">
+        <default>#00B0ff</default>
+    </entry>
+    <entry name="lightColorPink" type="Color">
+        <default>#ffB0ff</default>
+    </entry>
+
+  </group>
+</kcfg>
