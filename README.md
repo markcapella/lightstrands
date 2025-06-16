@@ -23,17 +23,19 @@ A twinkling, stretchable Holidays Lights Strand widget
 ### Clone lightstrands working source folder.
     git clone https://github.com/markcapella/lightstrands
 
-### Change into working source folder.
+### Change into working source folder & make your dev tools executable.
     cd lightstrands
+    chmod 755 run install uninstall
+### (Optionally) Run the widget in an emulator for testing changes.
+    ./run
+    
+### Install the widget to the desktop widgets panel.
+    ./install
 
-## Basic development in working source folder.
-### Run the widget in an emulator for testing changes.
-* ./run
-### Install the widget to the plasma-shell.
-* ./install
-Then, mouse to the widgets panel and drop lighstrands onto your desktop.
-### Install the widget to the plasma-shell.
-* ./uninstall
+### Then, mouse to the widgets panel and drop lightstrands onto your desktop.
+!['install2'](https://github.com/markcapella/lightstrands/blob/main/screenshot_install.png)
+### And you're ready to go! If ever required, you can uninstall the widget from the desktop widgets panel.
+    ./uninstall
 
 &nbsp;
 ## Acknowledgements.
