@@ -7,6 +7,23 @@
 .import "RocketBulb.js" as RocketBulb
 .import "PumpkinBulb.js" as PumpkinBulb
 
+.import "BalloonsBulb.js" as BalloonsBulb
+.import "CandleBulb.js" as CandleBulb
+.import "ColonyHatBulb.js" as ColonyHatBulb
+.import "DrinksBulb.js" as DrinksBulb
+.import "FireworksBulb.js" as FireworksBulb
+.import "GhostBulb.js" as GhostBulb
+.import "HalloweenBulb.js" as HalloweenBulb
+.import "LobsterBulb.js" as LobsterBulb
+.import "LobsterUpBulb.js" as LobsterUpBulb
+.import "NewYearsBulb.js" as NewYearsBulb
+.import "PartyBulb.js" as PartyBulb
+.import "PumpkinPieBulb.js" as PumpkinPieBulb
+.import "RibbonsBulb.js" as RibbonsBulb
+.import "SkullBulb.js" as SkullBulb
+.import "StarsBulb.js" as StarsBulb
+.import "TurkeyLeftBulb.js" as TurkeyLeftBulb
+.import "TurkeyRightBulb.js" as TurkeyRightBulb
 
 
 /** ************************************************
@@ -71,7 +88,25 @@ var mLightBulbShapesList = [
     EasterEggBulb.EasterEggBulb,
     AmericanBulb.AmericanBulb,
     RocketBulb.RocketBulb,
-    PumpkinBulb.PumpkinBulb
+    PumpkinBulb.PumpkinBulb,
+
+    BalloonsBulb.BalloonsBulb,
+    CandleBulb.CandleBulb,
+    ColonyHatBulb.ColonyHatBulb,
+    DrinksBulb.DrinksBulb,
+    FireworksBulb.FireworksBulb,
+    GhostBulb.GhostBulb,
+    HalloweenBulb.HalloweenBulb,
+    LobsterBulb.LobsterBulb,
+    LobsterUpBulb.LobsterUpBulb,
+    NewYearsBulb.NewYearsBulb,
+    PartyBulb.PartyBulb,
+    PumpkinPieBulb.PumpkinPieBulb,
+    RibbonsBulb.RibbonsBulb,
+    SkullBulb.SkullBulb,
+    StarsBulb.StarsBulb,
+    TurkeyLeftBulb.TurkeyLeftBulb,
+    TurkeyRightBulb.TurkeyRightBulb,
 ];
 
 

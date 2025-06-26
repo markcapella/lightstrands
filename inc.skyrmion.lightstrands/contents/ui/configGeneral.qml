@@ -44,12 +44,30 @@ KCM.SimpleKCM {
                 parent.horizontalCenter;
 
             model: [
-                i18n("     Xmas Lights"),
-                i18n("Plain Easter Eggs"),
-                i18n("Fancy Easter Eggs"),
-                i18n("   American Flag"),
-                i18n(" Shooting Rockets"),
-                i18n("Halloween Pumpkins")
+                i18n("      Xmas Lights"),
+                i18n("  Plain Easter Eggs"),
+                i18n("  Fancy Easter Eggs"),
+                i18n("    American Flag"),
+                i18n("   Shooting Rockets"),
+                i18n(" Halloween Pumpkins"),
+
+                i18n("    Scary Balloons"),
+                i18n("    Castle Candles"),
+                i18n("    Colonist Hat"),
+                i18n("   New Years Drinks"),
+                i18n("     Fireworks"),
+                i18n("     Ghost Bulb"),
+                i18n("    Halloween Bulbs"),
+                i18n("     Lobster Bulb"),
+                i18n("   Standing Lobster"),
+                i18n("    New Years Clock"),
+                i18n("    New Years Party"),
+                i18n("   Thanksgiving Pie"),
+                i18n("       Ribbons"),
+                i18n("      Skull Bulb"),
+                i18n("      Stars Bulb"),
+                i18n("     Turkey Bulb"),
+                i18n(" Turkey Facing Right")
             ];
 
             onCurrentIndexChanged:
