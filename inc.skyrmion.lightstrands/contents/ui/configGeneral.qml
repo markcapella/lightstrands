@@ -49,13 +49,13 @@ KCM.SimpleKCM {
                 i18n("  Fancy Easter Eggs"),
                 i18n("    American Flag"),
                 i18n("   Shooting Rockets"),
-                i18n(" Halloween Pumpkins"),
+                i18n("  Halloween Pumpkins"),
 
                 i18n("    Scary Balloons"),
                 i18n("    Castle Candles"),
                 i18n("    Colonist Hat"),
                 i18n("   New Years Drinks"),
-                i18n("     Fireworks"),
+                i18n("      Fireworks"),
                 i18n("     Ghost Bulb"),
                 i18n("    Halloween Bulbs"),
                 i18n("     Lobster Bulb"),
@@ -67,7 +67,17 @@ KCM.SimpleKCM {
                 i18n("      Skull Bulb"),
                 i18n("      Stars Bulb"),
                 i18n("     Turkey Bulb"),
-                i18n(" Turkey Facing Right")
+                i18n("  Turkey Facing Right"),
+
+                i18n("     4-Leaf CLover"),
+                i18n("      Fancy Clover"),
+                i18n("   Flower Vase Bulb"),
+                i18n("      Heart Bulb"),
+                i18n("    Heart Balloons"),
+                i18n("    Heart Star Bulb"),
+                i18n("   Irish Bulb Strand"),
+                i18n("    Irish Hat Bulb"),
+                i18n("    Pot Of Gold Bulb")
             ];
 
             onCurrentIndexChanged:

@@ -25,6 +25,16 @@
 .import "TurkeyLeftBulb.js" as TurkeyLeftBulb
 .import "TurkeyRightBulb.js" as TurkeyRightBulb
 
+.import "CloverBulb.js" as CloverBulb
+.import "FancyCloverBulb.js" as FancyCloverBulb
+.import "FlowerVaseBulb.js" as FlowerVaseBulb
+.import "HeartBulb.js" as HeartBulb
+.import "HeartsBulb.js" as HeartsBulb
+.import "HeartStarBulb.js" as HeartStarBulb
+.import "IrishBulb.js" as IrishBulb
+.import "IrishHatBulb.js" as IrishHatBulb
+.import "PotOfGoldBulb.js" as PotOfGoldBulb
+
 
 /** ************************************************
  ** Module consts.
@@ -107,6 +117,16 @@ var mLightBulbShapesList = [
     StarsBulb.StarsBulb,
     TurkeyLeftBulb.TurkeyLeftBulb,
     TurkeyRightBulb.TurkeyRightBulb,
+
+    CloverBulb.CloverBulb,
+    FancyCloverBulb.FancyCloverBulb,
+    FlowerVaseBulb.FlowerVaseBulb,
+    HeartBulb.HeartBulb,
+    HeartsBulb.HeartsBulb,
+    HeartStarBulb.HeartStarBulb,
+    IrishBulb.IrishBulb,
+    IrishHatBulb.IrishHatBulb,
+    PotOfGoldBulb.PotOfGoldBulb,
 ];
 
 
