@@ -6,8 +6,13 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-        name: i18nc("@title", "General")
-        icon: "preferences-desktop-plasma"
-        source: "configGeneral.qml"
+        name: i18n("Appearance")
+        icon: "preferences-desktop-color"
+        source: "configAppearance.qml"
+    }
+    ConfigCategory {
+        name: i18n("Credits")
+        icon: "text-x-adasrc"
+        source: "configCredits.qml"
     }
 }

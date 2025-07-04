@@ -16,8 +16,10 @@ KCM.SimpleKCM {
     property alias cfg_chosenBulb:
         chosenBulbComboBox.currentIndex;
 
-    property alias cfg_bulbSpaceWidthSlider:
-        bulbSpaceWidthSlider.value;
+    property alias cfg_bulbSpaceSlider:
+        bulbSpaceSlider.value;
+    property alias cfg_strandSpaceSlider:
+        strandSpaceSlider.value;
 
     property alias cfg_showLightRed: showLightRed.checked;
     property alias cfg_showLightLime: showLightLime.checked;
@@ -44,40 +46,52 @@ KCM.SimpleKCM {
                 parent.horizontalCenter;
 
             model: [
-                i18n("      Xmas Lights"),
-                i18n("  Plain Easter Eggs"),
-                i18n("  Fancy Easter Eggs"),
-                i18n("    American Flag"),
-                i18n("   Shooting Rockets"),
-                i18n("  Halloween Pumpkins"),
-
-                i18n("    Scary Balloons"),
-                i18n("    Castle Candles"),
-                i18n("    Colonist Hat"),
-                i18n("   New Years Drinks"),
-                i18n("      Fireworks"),
-                i18n("     Ghost Bulb"),
-                i18n("    Halloween Bulbs"),
-                i18n("     Lobster Bulb"),
-                i18n("   Standing Lobster"),
-                i18n("    New Years Clock"),
-                i18n("    New Years Party"),
-                i18n("   Thanksgiving Pie"),
-                i18n("       Ribbons"),
-                i18n("      Skull Bulb"),
-                i18n("      Stars Bulb"),
-                i18n("     Turkey Bulb"),
-                i18n("  Turkey Facing Right"),
-
-                i18n("     4-Leaf CLover"),
-                i18n("      Fancy Clover"),
-                i18n("   Flower Vase Bulb"),
-                i18n("      Heart Bulb"),
-                i18n("    Heart Balloons"),
-                i18n("    Heart Star Bulb"),
-                i18n("   Irish Bulb Strand"),
-                i18n("    Irish Hat Bulb"),
-                i18n("    Pot Of Gold Bulb")
+                i18n("American Bulb"),
+                i18n("Balloons Bulb"),
+                i18n("Candle Bulb"),
+                i18n("Clover Bulb"),
+                i18n("Colony Hat Bulb"),
+                i18n("Dotted Egg Bulb"),
+                i18n("Drinks Bulb"),
+                i18n("Easter Bunny Bulb"),
+                i18n("Easter Chick Bulb"),
+                i18n("Easter Egg Bulb"),
+                i18n("Easter Sign Bulb"),
+                i18n("Fancy Clover Bulb"),
+                i18n("Fireworks Bulb"),
+                i18n("Flower Vase Bulb"),
+                i18n("Ghost Bulb"),
+                i18n("Halloween Bulb"),
+                i18n("Heart Bulb"),
+                i18n("Hearts Bulb"),
+                i18n("Heart Star Bulb"),
+                i18n("Irish Bulb"),
+                i18n("Irish Hat Bulb"),
+                i18n("Lobster Bulb"),
+                i18n("Lobster Up Bulb"),
+                i18n("New Years Bulb"),
+                i18n("Party Bulb"),
+                i18n("Plain Easter Egg Bulb"),
+                i18n("Pot Of Gold Bulb"),
+                i18n("Pumpkin Bulb"),
+                i18n("Pumpkin Pie Bulb"),
+                i18n("Ribbons Bulb"),
+                i18n("Rocket Bulb"),
+                i18n("Santa Boots Bulb"),
+                i18n("Skull Bulb"),
+                i18n("Snow Flake Bulb"),
+                i18n("Sparkly Candle Bulb"),
+                i18n("Stars Bulb"),
+                i18n("Turkey Left Bulb"),
+                i18n("Turkey Right Bulb"),
+                i18n("Wavy Egg Bulb"),
+                i18n("Xmas Bulb"),
+                i18n("Xmas Fancy Bulb"),
+                i18n("Xmas Holly Bulb"),
+                i18n("Xmas Round Bulb"),
+                i18n("Xmas Strand Bulb"),
+                i18n("Xmas Three Bulb"),
+                i18n("Xmas Wreath Bulb")
             ];
 
             onCurrentIndexChanged:
@@ -94,7 +108,25 @@ KCM.SimpleKCM {
             Layout.fillWidth: true;
 
             QtControls.Slider {
-                id: bulbSpaceWidthSlider;
+                id: bulbSpaceSlider;
+                Layout.fillWidth: true;
+                from: 0;
+                to: 50;
+                stepSize: 1;
+            }
+        }
+
+
+        Item {
+            Kirigami.FormData.label: "Strand Spacing";
+            Kirigami.FormData.isSection: true;
+        }
+
+        RowLayout {
+            Layout.fillWidth: true;
+
+            QtControls.Slider {
+                id: strandSpaceSlider;
                 Layout.fillWidth: true;
                 from: 0;
                 to: 50;

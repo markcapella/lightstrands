@@ -1,6 +1,6 @@
 
-const ColonyHatBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "ColonyHatBulb",
 
     width: 88,
     height: 91,

@@ -1,6 +1,6 @@
 
-const EasterEggBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "EasterEggBulb",
 
     width: 54,
     height: 58,

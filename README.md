@@ -7,6 +7,9 @@
 ## Configure bulb shapes, spacing, orientation & colors.
 !['configure'](https://github.com/markcapella/lightstrands/blob/main/screenshot_configure.png)
 
+## Lightstrands Widget spins to match your backgrounds!
+!['left'](https://github.com/markcapella/lightstrands/blob/main/screenshot_spin.png)
+
 ## Set one vertically left & right!
 !['left'](https://github.com/markcapella/lightstrands/blob/main/screenshot_left.png)
 !['right'](https://github.com/markcapella/lightstrands/blob/main/screenshot_right.png)

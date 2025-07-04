@@ -1,6 +1,6 @@
 
-const PartyBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "PartyBulb",
 
     width: 74,
     height: 72,

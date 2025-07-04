@@ -1,6 +1,6 @@
 
-const RibbonsBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "RibbonsBulb",
 
     width: 79,
     height: 86,

@@ -1,6 +1,6 @@
 
-const CandleBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "CandleBulb",
 
     width: 59,
     height: 61,

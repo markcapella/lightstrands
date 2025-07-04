@@ -1,40 +1,53 @@
 
-// Gray themed LightShapes.
-.import "XmasBulb.js" as XmasBulb
-.import "PlainEasterEggBulb.js" as PlainEasterEggBulb
-.import "EasterEggBulb.js" as EasterEggBulb
+/** ************************************************
+ ** Bulb "class" definition imports.
+ **/
 .import "AmericanBulb.js" as AmericanBulb
-.import "RocketBulb.js" as RocketBulb
-.import "PumpkinBulb.js" as PumpkinBulb
-
 .import "BalloonsBulb.js" as BalloonsBulb
 .import "CandleBulb.js" as CandleBulb
+.import "CloverBulb.js" as CloverBulb
 .import "ColonyHatBulb.js" as ColonyHatBulb
+.import "DottedEggBulb.js" as DottedEggBulb
 .import "DrinksBulb.js" as DrinksBulb
+.import "EasterBunnyBulb.js" as EasterBunnyBulb
+.import "EasterChickBulb.js" as EasterChickBulb
+.import "EasterEggBulb.js" as EasterEggBulb
+.import "EasterSignBulb.js" as EasterSignBulb
+.import "FancyCloverBulb.js" as FancyCloverBulb
 .import "FireworksBulb.js" as FireworksBulb
+.import "FlowerVaseBulb.js" as FlowerVaseBulb
 .import "GhostBulb.js" as GhostBulb
 .import "HalloweenBulb.js" as HalloweenBulb
-.import "LobsterBulb.js" as LobsterBulb
-.import "LobsterUpBulb.js" as LobsterUpBulb
-.import "NewYearsBulb.js" as NewYearsBulb
-.import "PartyBulb.js" as PartyBulb
-.import "PumpkinPieBulb.js" as PumpkinPieBulb
-.import "RibbonsBulb.js" as RibbonsBulb
-.import "SkullBulb.js" as SkullBulb
-.import "StarsBulb.js" as StarsBulb
-.import "TurkeyLeftBulb.js" as TurkeyLeftBulb
-.import "TurkeyRightBulb.js" as TurkeyRightBulb
-
-.import "CloverBulb.js" as CloverBulb
-.import "FancyCloverBulb.js" as FancyCloverBulb
-.import "FlowerVaseBulb.js" as FlowerVaseBulb
 .import "HeartBulb.js" as HeartBulb
 .import "HeartsBulb.js" as HeartsBulb
 .import "HeartStarBulb.js" as HeartStarBulb
 .import "IrishBulb.js" as IrishBulb
 .import "IrishHatBulb.js" as IrishHatBulb
+.import "LobsterBulb.js" as LobsterBulb
+.import "LobsterUpBulb.js" as LobsterUpBulb
+.import "NewYearsBulb.js" as NewYearsBulb
+.import "PartyBulb.js" as PartyBulb
+.import "PlainEasterEggBulb.js" as PlainEasterEggBulb
 .import "PotOfGoldBulb.js" as PotOfGoldBulb
-
+.import "PumpkinBulb.js" as PumpkinBulb
+.import "PumpkinPieBulb.js" as PumpkinPieBulb
+.import "RibbonsBulb.js" as RibbonsBulb
+.import "RocketBulb.js" as RocketBulb
+.import "SantaBootsBulb.js" as SantaBootsBulb
+.import "SkullBulb.js" as SkullBulb
+.import "SnowFlakeBulb.js" as SnowFlakeBulb
+.import "SparklyCandleBulb.js" as SparklyCandleBulb
+.import "StarsBulb.js" as StarsBulb
+.import "TurkeyLeftBulb.js" as TurkeyLeftBulb
+.import "TurkeyRightBulb.js" as TurkeyRightBulb
+.import "WavyEggBulb.js" as WavyEggBulb
+.import "XmasBulb.js" as XmasBulb
+.import "XmasFancyBulb.js" as XmasFancyBulb
+.import "XmasHollyBulb.js" as XmasHollyBulb
+.import "XmasRoundBulb.js" as XmasRoundBulb
+.import "XmasStrandBulb.js" as XmasStrandBulb
+.import "XmasThreeBulb.js" as XmasThreeBulb
+.import "XmasWreathBulb.js" as XmasWreathBulb
 
 /** ************************************************
  ** Module consts.
@@ -67,6 +80,8 @@ const DARK_GRAYED_RGBA = Qt.rgba(
 
 // Bulb color types.
 const GRAYED = -1;
+
+const MAX_LIGHT_COLORS = 8;
 const RED = 0;
 const LIME = 1;
 const PURPLE = 2;
@@ -75,8 +90,6 @@ const GREEN = 4;
 const ORANGE = 5;
 const BLUE = 6;
 const PINK = 7;
-const MAX_LIGHT_COLORS = 8;
-
 
 /** ************************************************
  ** Module globals.
@@ -93,42 +106,53 @@ var mBulbNeedsRedraw = [ ];
 
 // Bulb shape list.
 var mLightBulbShapesList = [
-    XmasBulb.XmasBulb,
-    PlainEasterEggBulb.PlainEasterEggBulb,
-    EasterEggBulb.EasterEggBulb,
-    AmericanBulb.AmericanBulb,
-    RocketBulb.RocketBulb,
-    PumpkinBulb.PumpkinBulb,
-
-    BalloonsBulb.BalloonsBulb,
-    CandleBulb.CandleBulb,
-    ColonyHatBulb.ColonyHatBulb,
-    DrinksBulb.DrinksBulb,
-    FireworksBulb.FireworksBulb,
-    GhostBulb.GhostBulb,
-    HalloweenBulb.HalloweenBulb,
-    LobsterBulb.LobsterBulb,
-    LobsterUpBulb.LobsterUpBulb,
-    NewYearsBulb.NewYearsBulb,
-    PartyBulb.PartyBulb,
-    PumpkinPieBulb.PumpkinPieBulb,
-    RibbonsBulb.RibbonsBulb,
-    SkullBulb.SkullBulb,
-    StarsBulb.StarsBulb,
-    TurkeyLeftBulb.TurkeyLeftBulb,
-    TurkeyRightBulb.TurkeyRightBulb,
-
-    CloverBulb.CloverBulb,
-    FancyCloverBulb.FancyCloverBulb,
-    FlowerVaseBulb.FlowerVaseBulb,
-    HeartBulb.HeartBulb,
-    HeartsBulb.HeartsBulb,
-    HeartStarBulb.HeartStarBulb,
-    IrishBulb.IrishBulb,
-    IrishHatBulb.IrishHatBulb,
-    PotOfGoldBulb.PotOfGoldBulb,
+    AmericanBulb.BULB,
+    BalloonsBulb.BULB,
+    CandleBulb.BULB,
+    CloverBulb.BULB,
+    ColonyHatBulb.BULB,
+    DottedEggBulb.BULB,
+    DrinksBulb.BULB,
+    EasterBunnyBulb.BULB,
+    EasterChickBulb.BULB,
+    EasterEggBulb.BULB,
+    EasterSignBulb.BULB,
+    FancyCloverBulb.BULB,
+    FireworksBulb.BULB,
+    FlowerVaseBulb.BULB,
+    GhostBulb.BULB,
+    HalloweenBulb.BULB,
+    HeartBulb.BULB,
+    HeartsBulb.BULB,
+    HeartStarBulb.BULB,
+    IrishBulb.BULB,
+    IrishHatBulb.BULB,
+    LobsterBulb.BULB,
+    LobsterUpBulb.BULB,
+    NewYearsBulb.BULB,
+    PartyBulb.BULB,
+    PlainEasterEggBulb.BULB,
+    PotOfGoldBulb.BULB,
+    PumpkinBulb.BULB,
+    PumpkinPieBulb.BULB,
+    RibbonsBulb.BULB,
+    RocketBulb.BULB,
+    SantaBootsBulb.BULB,
+    SkullBulb.BULB,
+    SnowFlakeBulb.BULB,
+    SparklyCandleBulb.BULB,
+    StarsBulb.BULB,
+    TurkeyLeftBulb.BULB,
+    TurkeyRightBulb.BULB,
+    WavyEggBulb.BULB,
+    XmasBulb.BULB,
+    XmasFancyBulb.BULB,
+    XmasHollyBulb.BULB,
+    XmasRoundBulb.BULB,
+    XmasStrandBulb.BULB,
+    XmasThreeBulb.BULB,
+    XmasWreathBulb.BULB
 ];
-
 
 /** ************************************************
  ** This method initializes the module.
@@ -137,7 +161,7 @@ function initLightsModule() {
     setAllBulbPositions();
     setAllBulbColors();
 
-    setModuleInitialized();
+    setIsModuleInitialized(true);
 }
 
 /** ************************************************
@@ -159,7 +183,7 @@ function setAllBulbPositions() {
 function setHorizontalBulbPositions() {
     var xPos = getFirstHorizontalBulbXPos();
     const ONE_COLUMN_WIDTH =
-        getLightsShapeWidth() + getBulbSpacingValue();
+        getLightsShapeWidth() + getBulbSpace();
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
@@ -179,7 +203,7 @@ function getFirstHorizontalBulbXPos() {
     const ALL_BULB_WIDTHS = BULB_COUNT *
         getLightsShapeWidth();
     const ALL_BULB_MARGINS = BULB_COUNT > 0 ?
-         (BULB_COUNT - 1) * getBulbSpacingValue() : 0;
+         (BULB_COUNT - 1) * getBulbSpace() : 0;
 
     const WIDTH_FOR_MARGINS = mCanvas.width -
         (ALL_BULB_WIDTHS + ALL_BULB_MARGINS);
@@ -195,7 +219,7 @@ function getFirstHorizontalBulbXPos() {
  **/
 function getYPosForHorizontalBulbNumber(lightNumber) {
     const ALL_BULB_HEIGHTS = getLightsShapeHeight() +
-        CFG.bulbAlternatingOffset;
+        getStrandSpace();
 
     const HEIGHT_FOR_MARGINS = mCanvas.height -
         ALL_BULB_HEIGHTS;
@@ -207,7 +231,7 @@ function getYPosForHorizontalBulbNumber(lightNumber) {
 
     return IS_LIGHT_NUMBER_EVEN ?
         TOP_MARGIN_HEIGHT : TOP_MARGIN_HEIGHT +
-            CFG.bulbAlternatingOffset;
+            getStrandSpace();
 }
 
 /** ************************************************
@@ -217,7 +241,7 @@ function getYPosForHorizontalBulbNumber(lightNumber) {
 function setVerticalBulbPositions() {
     var yPos = getFirstVerticalBulbYPos();
     const ONE_COLUMN_HEIGHT =
-        getLightsShapeHeight() + getBulbSpacingValue();
+        getLightsShapeHeight() + getBulbSpace();
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
@@ -237,7 +261,7 @@ function getFirstVerticalBulbYPos() {
     const ALL_BULB_HEIGHTS = BULB_COUNT *
         getLightsShapeHeight();
     const ALL_BULB_MARGINS = BULB_COUNT > 0 ?
-         (BULB_COUNT - 1) * getBulbSpacingValue() : 0;
+         (BULB_COUNT - 1) * getBulbSpace() : 0;
 
     const HEIGHT_FOR_MARGINS = mCanvas.height -
         (ALL_BULB_HEIGHTS + ALL_BULB_MARGINS);
@@ -253,7 +277,7 @@ function getFirstVerticalBulbYPos() {
  **/
 function getXPosForVerticalBulbNumber(lightNumber) {
     const ALL_BULB_WIDTHS = getLightsShapeWidth() +
-        CFG.bulbAlternatingOffset;
+        getStrandSpace();
 
     const WIDTH_FOR_MARGINS = mCanvas.width -
         ALL_BULB_WIDTHS;
@@ -265,7 +289,7 @@ function getXPosForVerticalBulbNumber(lightNumber) {
 
     return IS_LIGHT_NUMBER_EVEN ?
         TOP_MARGIN_WIDTH : TOP_MARGIN_WIDTH +
-            CFG.bulbAlternatingOffset;
+            getStrandSpace();
 }
 
 /** ************************************************
@@ -312,7 +336,7 @@ function getBulbCount() {
  **/
 function getHorizontalBulbCount() {
     const ONE_BULB_AND_SPACE_WIDTH =
-        getLightsShapeWidth() + getBulbSpacingValue();
+        getLightsShapeWidth() + getBulbSpace();
 
     const TOTAL_NUMBER_BULBS = Math.floor(
         mCanvas.width / ONE_BULB_AND_SPACE_WIDTH);
@@ -326,7 +350,7 @@ function getHorizontalBulbCount() {
  **/
 function getVerticalBulbCount() {
     const ONE_BULB_AND_SPACE_HEIGHT =
-        getLightsShapeHeight() + getBulbSpacingValue();
+        getLightsShapeHeight() + getBulbSpace();
 
     const TOTAL_NUMBER_BULBS = Math.floor(
         mCanvas.height / ONE_BULB_AND_SPACE_HEIGHT);
@@ -645,11 +669,16 @@ function getMinimumSquareCanvasSize() {
     var resultSize = 0;
 
     for (const BULB of mLightBulbShapesList) {
-        if (BULB.width > resultSize) {
-            resultSize = BULB.width;
+        const WIDTH = BULB.width +
+            getBulbSpace();
+        if (WIDTH > resultSize) {
+            resultSize = WIDTH;
         }
-        if (BULB.height > resultSize) {
-            resultSize = BULB.height;
+
+        const HEIGHT = BULB.height +
+            getStrandSpace();
+        if (HEIGHT > resultSize) {
+            resultSize = HEIGHT;
         }
     }
 
@@ -736,9 +765,19 @@ function drawBulb(bulbIndex) {
  ** at x,y in the bitmap.
  **/
 function getColorFromBitmapAt(x, y) {
-    return getLightsShape().colors[
-        getLightsShape().colorsIndex.indexOf(
-            getColorIndexFromBitmapAt(x, y))];
+    const COLOR_CHAR = getColorIndexFromBitmapAt(x, y);
+    const COLOR_INDEX = getLightsShape().colorsIndex.
+        indexOf(COLOR_CHAR);
+
+    if (COLOR_INDEX == -1) {
+        console.log("lightstrands: Lights.js " +
+            "getColorFromBitmapAt() Ignores " +
+            "invalid Bitmap char [" + COLOR_CHAR +
+            "] in BULB: [" + getLightsShapeId() + "]");
+        return "None";
+    }
+
+    return getLightsShape().colors[COLOR_INDEX];
 }
 
 /** ************************************************
@@ -785,8 +824,8 @@ function updateCanvasFrame() {
 function getIsModuleInitialized() {
     return CFG.isModuleInitialized;
 }
-function setModuleInitialized() {
-    CFG.isModuleInitialized = true;
+function setIsModuleInitialized(value) {
+    CFG.isModuleInitialized = value;
 }
 
 /** ************************************************
@@ -802,8 +841,15 @@ function isStrandVertical() {
 /** ************************************************
  ** Getter for bulb spacing.
  **/
-function getBulbSpacingValue() {
-    return CFG.bulbSpaceWidthSlider;
+function getBulbSpace() {
+    return CFG.bulbSpaceSlider;
+}
+
+/** ************************************************
+ ** Getter for strand spacing.
+ **/
+function getStrandSpace() {
+    return CFG.strandSpaceSlider;
 }
 
 /** ************************************************
@@ -818,12 +864,14 @@ function getLightsShape() {
         getLightsShapeIndex()];
 }
 
-/** ************************************************
- ** Getters for bulb shape sizes.
- **/
+function getLightsShapeId() {
+    return getLightsShape().id;
+}
+
 function getLightsShapeWidth() {
     return getLightsShape().width;
 }
+
 function getLightsShapeHeight() {
     return getLightsShape().height;
 }

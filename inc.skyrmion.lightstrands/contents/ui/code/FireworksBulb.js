@@ -1,6 +1,6 @@
 
-const FireworksBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "FireworksBulb",
 
     width: 75,
     height: 81,

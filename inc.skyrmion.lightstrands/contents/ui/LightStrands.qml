@@ -36,8 +36,6 @@ Item {
         }
         isResizing = true;
         resizingStartTime = Date.now();
-        // Lights.initLightsModule();
-        // mCanvas.requestPaint();
     }
     onHeightChanged: {
         if (!isResizing) {
@@ -47,8 +45,6 @@ Item {
         }
         isResizing = true;
         resizingStartTime = Date.now();
-        // Lights.initLightsModule();
-        // mCanvas.requestPaint();
     }
 
     // Configuration pref change listener.
@@ -64,10 +60,22 @@ Item {
     }
 
     // Configuration pref change listener.
-    property int bulbSpaceWidthSlider:
-        mCFG.bulbSpaceWidthSlider;
+    property int bulbSpaceSlider:
+        mCFG.bulbSpaceSlider;
 
-    onBulbSpaceWidthSliderChanged: {
+    onBulbSpaceSliderChanged: {
+        if (isCanvasAvailable) {
+            Lights.clearCanvas();
+            Lights.initLightsModule();
+            mCanvas.requestPaint();
+        }
+    }
+
+    // Configuration pref change listener.
+    property int strandSpaceSlider:
+        mCFG.strandSpaceSlider;
+
+    onStrandSpaceSliderChanged: {
         if (isCanvasAvailable) {
             Lights.clearCanvas();
             Lights.initLightsModule();
@@ -226,6 +234,7 @@ Item {
                     return;
                 }
 
+                // Okay to update canvas;
                 Lights.updateCanvasFrame();
                 mCanvas.requestPaint();
             }

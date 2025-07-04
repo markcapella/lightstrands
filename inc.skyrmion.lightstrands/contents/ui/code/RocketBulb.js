@@ -1,6 +1,6 @@
 
-const RocketBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "RocketBulb",
 
     width: 67,
     height: 74,

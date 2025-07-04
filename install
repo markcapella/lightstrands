@@ -19,7 +19,7 @@ UNINSTALLED=$?
 if [[ "$UNINSTALLED" != "0" ]]; then
     echo -e "${COLOR_YELLOW}""   (Lightstrands requires" \
         "a successful uninstall"
-    echo "before it can be installed.)"
+    echo "before it can be re-installed.)"
     echo -e "${COLOR_NORMAL}"
     exit 1
 fi

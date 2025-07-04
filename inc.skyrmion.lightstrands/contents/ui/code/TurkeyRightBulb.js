@@ -1,6 +1,6 @@
 
-const TurkeyRightBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "TurkeyRightBulb",
 
     width: 86,
     height: 88,

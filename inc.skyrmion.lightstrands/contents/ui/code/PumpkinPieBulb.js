@@ -1,6 +1,6 @@
 
-const PumpkinPieBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "PumpkinPieBulb",
 
     width: 79,
     height: 86,

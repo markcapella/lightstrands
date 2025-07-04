@@ -30,11 +30,14 @@
 
     <!-- Bulb Selection prefs. -->
     <entry name="chosenBulb" type="Int">
-      <default>0</default>
+      <default>39</default>
     </entry>
 
     <!-- Bulb Spacing prefs. -->
-    <entry name="bulbSpaceWidthSlider" type="Int">
+    <entry name="bulbSpaceSlider" type="Int">
+      <default>15</default>
+    </entry>
+    <entry name="strandSpaceSlider" type="Int">
       <default>15</default>
     </entry>
 
@@ -65,10 +68,6 @@
     </entry>
 
     <!-- App constants. -->
-    <entry name="bulbAlternatingOffset" type="Int">
-      <default>15</default>
-    </entry>
-
     <entry name="colorBoxWidth" type="Int">
       <default>43</default>
     </entry>

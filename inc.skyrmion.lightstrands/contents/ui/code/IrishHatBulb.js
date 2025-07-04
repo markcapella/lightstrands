@@ -1,6 +1,6 @@
 
-const IrishHatBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "IrishHatBulb",
 
     width: 74,
     height: 71,

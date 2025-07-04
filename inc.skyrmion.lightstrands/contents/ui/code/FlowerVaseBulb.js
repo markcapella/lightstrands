@@ -1,6 +1,6 @@
 
-const FlowerVaseBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "FlowerVaseBulb",
 
     width: 59,
     height: 75,

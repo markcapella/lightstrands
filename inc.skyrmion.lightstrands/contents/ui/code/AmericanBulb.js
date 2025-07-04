@@ -1,6 +1,6 @@
 
-const AmericanBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "AmericanBulb",
 
     width: 96,
     height: 66,
@@ -10,7 +10,7 @@ const AmericanBulb = {
           "BRIGHT", "NORMAL", "DARK" ],
 
     colorsIndex:
-        [ " ", "@", "w", ",", "%", "-" ],
+        [ " ", ".", "w", ",", "%", "-" ],
 
     bitmap: [
         "      ....                                                                                      ",

@@ -1,6 +1,6 @@
 
-const NewYearsBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "NewYearsBulb",
 
     width: 67,
     height: 74,

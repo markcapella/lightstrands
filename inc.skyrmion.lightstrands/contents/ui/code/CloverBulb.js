@@ -1,6 +1,6 @@
 
-const CloverBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "CloverBulb",
 
     width: 57,
     height: 68,

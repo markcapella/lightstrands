@@ -1,6 +1,6 @@
 
-const PotOfGoldBulb = {
-    SHAPE_VERSION: 1.1,
+const BULB = {
+    id: "PotOfGoldBulb",
 
     width: 62,
     height: 70,
