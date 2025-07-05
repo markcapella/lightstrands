@@ -1,0 +1,244 @@
+
+# Portuguese translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-05 18:44-0400\n"
+"PO-Revision-Date: 2025-07-05 18:44-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:15
+msgid "Bulb Design Credits"
+msgstr "Créditos de design da lâmpada"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:22
+msgid "The majority of the Bulb shapes here"
+msgstr "A maioria das formas de lâmpada aqui"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:27
+msgid "were developed from images located at"
+msgstr "foram desenvolvidos a partir de imagens localizadas em"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:33
+msgid "https://www.flaticon.com/"
+msgstr ""
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:37
+msgid "Available Bulbs"
+msgstr "Lâmpadas disponíveis"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:39
+msgid "Bulb Selection"
+msgstr "Seleção de bulbo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:49
+msgid "American Bulb"
+msgstr "Bulbo americano"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:50
+msgid "Balloons Bulb"
+msgstr "Balões Bulbo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:51
+msgid "Candle Bulb"
+msgstr "Velas Bulbo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:52
+msgid "Clover Bulb"
+msgstr "Bulbo de trevo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:53
+msgid "Colony Hat Bulb"
+msgstr "Lâmpada de chapéu de colônia"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:54
+msgid "Dotted Egg Bulb"
+msgstr "Lâmpada de ovo pontilhada"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:55
+msgid "Drinks Bulb"
+msgstr "Bebidas lâmpadas"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:56
+msgid "Easter Bunny Bulb"
+msgstr "Lâmpada de coelhinho da Páscoa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:57
+msgid "Easter Chick Bulb"
+msgstr "Bulbo de pintinho da Páscoa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:58
+msgid "Easter Egg Bulb"
+msgstr "Lâmpada de ovo de Páscoa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:59
+msgid "Easter Sign Bulb"
+msgstr "Bulbo de sinal de Páscoa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:60
+msgid "Fancy Clover Bulb"
+msgstr "Bulbo de trevo sofisticado"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:61
+msgid "Fireworks Bulb"
+msgstr "Bulbo de fogos de artifício"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:62
+msgid "Flower Vase Bulb"
+msgstr "Lâmpada do vaso de flores"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:63
+msgid "Ghost Bulb"
+msgstr "Bulbo fantasma"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:64
+msgid "Halloween Bulb"
+msgstr "Lâmpada de Halloween"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:65
+msgid "Heart Bulb"
+msgstr "Lâmpada cardíaca"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:66
+msgid "Hearts Bulb"
+msgstr "Bulbo de corações"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:67
+msgid "Heart Star Bulb"
+msgstr "Bulbo de estrela do coração"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:68
+msgid "Irish Bulb"
+msgstr "Bulbo irlandês"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:69
+msgid "Irish Hat Bulb"
+msgstr "Bulbo irlandês"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:70
+msgid "Lobster Bulb"
+msgstr "Lagosta Bulbo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:71
+msgid "Lobster Up Bulb"
+msgstr "Lagosta para cima lâmpada"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:72
+msgid "New Years Bulb"
+msgstr "Bulbo de Ano Novo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:73
+msgid "Party Bulb"
+msgstr "Lâmpada de festa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:74
+msgid "Plain Easter Egg Bulb"
+msgstr "Lâmpada de ovo de Páscoa lisa"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:75
+msgid "Pot Of Gold Bulb"
+msgstr "Pote de lâmpada de ouro"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:76
+msgid "Pumpkin Bulb"
+msgstr "Bulbo de abóbora"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:77
+msgid "Pumpkin Pie Bulb"
+msgstr "Bulbo de torta de abóbora"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:78
+msgid "Ribbons Bulb"
+msgstr "Bulbo das fitas"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:79
+msgid "Rocket Bulb"
+msgstr "Bulbo de foguete"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:80
+msgid "Santa Boots Bulb"
+msgstr "Bulbo de Botas de Papai Noel"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:81
+msgid "Skull Bulb"
+msgstr "Bulbo do crânio"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:82
+msgid "Snow Flake Bulb"
+msgstr "Lâmpada de floco de neve"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:83
+msgid "Sparkly Candle Bulb"
+msgstr "Bulbo de vela brilhante"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:84
+msgid "Stars Bulb"
+msgstr "Estrelas bulbo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:85
+msgid "Turkey Left Bulb"
+msgstr "Bulbo esquerdo da Turquia"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:86
+msgid "Turkey Right Bulb"
+msgstr "Bulbo direito da Turquia"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:87
+msgid "Wavy Egg Bulb"
+msgstr "Lâmpada ovo ondulada"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:88
+msgid "Xmas Bulb"
+msgstr "Lâmpada de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:89
+msgid "Xmas Fancy Bulb"
+msgstr "Bulbo Fancy de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:90
+msgid "Xmas Holly Bulb"
+msgstr "Bulbo de Holly de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:91
+msgid "Xmas Round Bulb"
+msgstr "Bulbo redondo de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:92
+msgid "Xmas Strand Bulb"
+msgstr "Lâmpada de fita de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:93
+msgid "Xmas Three Bulb"
+msgstr "Xmas três lâmpadas"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:94
+msgid "Xmas Wreath Bulb"
+msgstr "Lâmpada de grinalda de Natal"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:103
+msgid "Bulb Spacing"
+msgstr "Espaçamento da lâmpada"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:121
+msgid "Strand Spacing"
+msgstr "Espaçamento fixo"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:139
+msgid "Bulb Colors"
+msgstr "Cores da lâmpada"
+
+#: ../inc.skyrmion.lightstrands/contents/config/config.qml:14
+msgid "Credits"
+msgstr "Créditos"
+

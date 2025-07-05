@@ -6,7 +6,11 @@ const WORKING_FOLDER = '.';
 
 
 /** ************************************************
- ** This method ...
+ ** exec:
+ **     > node convertJSToXPM.js
+ **
+ ** This method converts all fooBulb.js files
+ ** in a working folder to fooBulb.xpm format.
  **/
 FS.readdir(WORKING_FOLDER, (err, files) => {
     // Sanity check working folder name.
@@ -45,7 +49,7 @@ FS.readdir(WORKING_FOLDER, (err, files) => {
  **/
 function convertJStoXPM(file) {
     const BULB_JS_TAG = "Bulb.js";
-    const BULB_XPM_TAG = "Bulb";
+    const BULB_XPM_TAG = "Bulb.xpm";
     const CLASS_DOT_TAG = ".";
 
     // Only .js files for input.

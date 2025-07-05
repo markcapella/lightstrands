@@ -12,19 +12,19 @@ KCM.SimpleKCM {
 
     Kirigami.FormLayout {
         Item {
-            Kirigami.FormData.label: "Bulb Design Credits";
+            Kirigami.FormData.label: i18n("Bulb Design Credits");
             Kirigami.FormData.isSection: true;
         }
 
         QtControls.Label {
             Layout.fillWidth: true;
             horizontalAlignment: Text.AlignHCenter;
-            text: "The majority of the Bulb shapes here";
+            text: i18n("The majority of the Bulb shapes here");
         }
         QtControls.Label {
             Layout.fillWidth: true;
             horizontalAlignment: Text.AlignHCenter;
-            text: "were developed from images located at:";
+            text: i18n("were developed from images located at");
         }
         QtControls.Label {
             Layout.fillWidth: true;
@@ -34,7 +34,7 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Kirigami.FormData.label: "Available Bulbs";
+            Kirigami.FormData.label: i18n("Available Bulbs");
             Kirigami.FormData.isSection: true;
         }
 

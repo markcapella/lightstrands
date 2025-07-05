@@ -6,13 +6,13 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-        name: i18n("Appearance")
-        icon: "preferences-desktop-color"
-        source: "configAppearance.qml"
+        name: "Lightstrands"
+        icon: "lightstrands"
+        source: "configLightstrands.qml"
     }
     ConfigCategory {
         name: i18n("Credits")
-        icon: "text-x-adasrc"
+        icon: "lightstrands-credits"
         source: "configCredits.qml"
     }
 }

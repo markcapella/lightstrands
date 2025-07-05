@@ -1,0 +1,244 @@
+
+# Dutch translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-05 18:44-0400\n"
+"PO-Revision-Date: 2025-07-05 18:44-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:15
+msgid "Bulb Design Credits"
+msgstr "Boll -ontwerpkredieten"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:22
+msgid "The majority of the Bulb shapes here"
+msgstr "De meerderheid van de bolvormen hier"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:27
+msgid "were developed from images located at"
+msgstr "werden ontwikkeld op basis van afbeeldingen op"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:33
+msgid "https://www.flaticon.com/"
+msgstr ""
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:37
+msgid "Available Bulbs"
+msgstr "Beschikbare lampen"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:39
+msgid "Bulb Selection"
+msgstr "Selectie van bol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:49
+msgid "American Bulb"
+msgstr "Amerikaanse bol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:50
+msgid "Balloons Bulb"
+msgstr "Ballonnen lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:51
+msgid "Candle Bulb"
+msgstr "Kaarsenbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:52
+msgid "Clover Bulb"
+msgstr "Klaverlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:53
+msgid "Colony Hat Bulb"
+msgstr "Kolonie hoed lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:54
+msgid "Dotted Egg Bulb"
+msgstr "Gestippelde eierbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:55
+msgid "Drinks Bulb"
+msgstr "Drankjes lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:56
+msgid "Easter Bunny Bulb"
+msgstr "Paashaaslamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:57
+msgid "Easter Chick Bulb"
+msgstr "Paaskuiklamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:58
+msgid "Easter Egg Bulb"
+msgstr "Paaseierenlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:59
+msgid "Easter Sign Bulb"
+msgstr "Pasen tekenbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:60
+msgid "Fancy Clover Bulb"
+msgstr "Fancy Clover Bulb"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:61
+msgid "Fireworks Bulb"
+msgstr "Vuurwerklamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:62
+msgid "Flower Vase Bulb"
+msgstr "Bloemenvaasstol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:63
+msgid "Ghost Bulb"
+msgstr "Spookbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:64
+msgid "Halloween Bulb"
+msgstr "Halloween -lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:65
+msgid "Heart Bulb"
+msgstr "Hartlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:66
+msgid "Hearts Bulb"
+msgstr "Hartenbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:67
+msgid "Heart Star Bulb"
+msgstr "Hart Star -lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:68
+msgid "Irish Bulb"
+msgstr "Ierse lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:69
+msgid "Irish Hat Bulb"
+msgstr "Ierse hoedbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:70
+msgid "Lobster Bulb"
+msgstr "Kreeftlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:71
+msgid "Lobster Up Bulb"
+msgstr "Kreeft bol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:72
+msgid "New Years Bulb"
+msgstr "Nieuwjaarsstol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:73
+msgid "Party Bulb"
+msgstr "Feestlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:74
+msgid "Plain Easter Egg Bulb"
+msgstr "Gewone paaseierenlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:75
+msgid "Pot Of Gold Bulb"
+msgstr "Pot met gouden lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:76
+msgid "Pumpkin Bulb"
+msgstr "Pompoenbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:77
+msgid "Pumpkin Pie Bulb"
+msgstr "Pompoentaartbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:78
+msgid "Ribbons Bulb"
+msgstr "Linten lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:79
+msgid "Rocket Bulb"
+msgstr "Raketbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:80
+msgid "Santa Boots Bulb"
+msgstr "Santa Boots Bulb"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:81
+msgid "Skull Bulb"
+msgstr "Schedelbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:82
+msgid "Snow Flake Bulb"
+msgstr "Sneeuwvlokbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:83
+msgid "Sparkly Candle Bulb"
+msgstr "Sprankelende kaarsbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:84
+msgid "Stars Bulb"
+msgstr "Sterrenlamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:85
+msgid "Turkey Left Bulb"
+msgstr "Turkije links bol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:86
+msgid "Turkey Right Bulb"
+msgstr "Turkije rechter lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:87
+msgid "Wavy Egg Bulb"
+msgstr "Golvende eierbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:88
+msgid "Xmas Bulb"
+msgstr "Kerstmisbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:89
+msgid "Xmas Fancy Bulb"
+msgstr "Xmas Fancy Bulb"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:90
+msgid "Xmas Holly Bulb"
+msgstr "Xmas Holly Bulb"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:91
+msgid "Xmas Round Bulb"
+msgstr "Kerstronde lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:92
+msgid "Xmas Strand Bulb"
+msgstr "Xmas Strand -lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:93
+msgid "Xmas Three Bulb"
+msgstr "Kerstmis drie lamp"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:94
+msgid "Xmas Wreath Bulb"
+msgstr "Kerstmisbol"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:103
+msgid "Bulb Spacing"
+msgstr "Lampafstand"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:121
+msgid "Strand Spacing"
+msgstr "Strengafstand"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:139
+msgid "Bulb Colors"
+msgstr "Bolkleuren"
+
+#: ../inc.skyrmion.lightstrands/contents/config/config.qml:14
+msgid "Credits"
+msgstr "Credits"
+

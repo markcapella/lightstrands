@@ -4,7 +4,7 @@ import QtQuick.Layouts;
 
 import org.kde.plasma.plasmoid;
 
-import "code/Lights.js" as Lights;
+import "Lights.js" as Lights;
 
 
 Item {

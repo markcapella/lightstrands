@@ -1,0 +1,244 @@
+
+# Japanese translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-05 18:44-0400\n"
+"PO-Revision-Date: 2025-07-05 18:44-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:15
+msgid "Bulb Design Credits"
+msgstr "電球の設計クレジット"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:22
+msgid "The majority of the Bulb shapes here"
+msgstr "ここでの電球形状の大部分"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:27
+msgid "were developed from images located at"
+msgstr "にある画像から開発されました"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:33
+msgid "https://www.flaticon.com/"
+msgstr ""
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configCredits.qml:37
+msgid "Available Bulbs"
+msgstr "利用可能な電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:39
+msgid "Bulb Selection"
+msgstr "電球選択"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:49
+msgid "American Bulb"
+msgstr "アメリカの電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:50
+msgid "Balloons Bulb"
+msgstr "バルーンの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:51
+msgid "Candle Bulb"
+msgstr "キャンドル電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:52
+msgid "Clover Bulb"
+msgstr "クローバー電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:53
+msgid "Colony Hat Bulb"
+msgstr "コロニット電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:54
+msgid "Dotted Egg Bulb"
+msgstr "点線の卵電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:55
+msgid "Drinks Bulb"
+msgstr "球根を飲む"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:56
+msgid "Easter Bunny Bulb"
+msgstr "イースターバニー電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:57
+msgid "Easter Chick Bulb"
+msgstr "イースターのひよこ球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:58
+msgid "Easter Egg Bulb"
+msgstr "イースターエッグ電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:59
+msgid "Easter Sign Bulb"
+msgstr "イースターサインバルブ"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:60
+msgid "Fancy Clover Bulb"
+msgstr "派手なクローバー電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:61
+msgid "Fireworks Bulb"
+msgstr "花火の球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:62
+msgid "Flower Vase Bulb"
+msgstr "花瓶の球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:63
+msgid "Ghost Bulb"
+msgstr "ゴースト電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:64
+msgid "Halloween Bulb"
+msgstr "ハロウィーンの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:65
+msgid "Heart Bulb"
+msgstr "ハート電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:66
+msgid "Hearts Bulb"
+msgstr "ハート電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:67
+msgid "Heart Star Bulb"
+msgstr "ハートスター電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:68
+msgid "Irish Bulb"
+msgstr "アイルランドの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:69
+msgid "Irish Hat Bulb"
+msgstr "アイリッシュハット電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:70
+msgid "Lobster Bulb"
+msgstr "ロブスター電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:71
+msgid "Lobster Up Bulb"
+msgstr "ロブスターアップ電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:72
+msgid "New Years Bulb"
+msgstr "新年の球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:73
+msgid "Party Bulb"
+msgstr "党の電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:74
+msgid "Plain Easter Egg Bulb"
+msgstr "プレーンイースターエッグ電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:75
+msgid "Pot Of Gold Bulb"
+msgstr "金電球の鍋"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:76
+msgid "Pumpkin Bulb"
+msgstr "カボチャの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:77
+msgid "Pumpkin Pie Bulb"
+msgstr "パンプキンパイ電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:78
+msgid "Ribbons Bulb"
+msgstr "リボン電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:79
+msgid "Rocket Bulb"
+msgstr "ロケット電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:80
+msgid "Santa Boots Bulb"
+msgstr "サンタブーツの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:81
+msgid "Skull Bulb"
+msgstr "頭蓋骨電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:82
+msgid "Snow Flake Bulb"
+msgstr "スノーフレーク電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:83
+msgid "Sparkly Candle Bulb"
+msgstr "キラキラしたろうそくの球根"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:84
+msgid "Stars Bulb"
+msgstr "星電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:85
+msgid "Turkey Left Bulb"
+msgstr "七面鳥は電球を左に去りました"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:86
+msgid "Turkey Right Bulb"
+msgstr "七面鳥の右電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:87
+msgid "Wavy Egg Bulb"
+msgstr "波状の卵電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:88
+msgid "Xmas Bulb"
+msgstr "クリスマス電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:89
+msgid "Xmas Fancy Bulb"
+msgstr "クリスマスファンシー電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:90
+msgid "Xmas Holly Bulb"
+msgstr "クリスマスホリーバルブ"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:91
+msgid "Xmas Round Bulb"
+msgstr "クリスマスラウンド電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:92
+msgid "Xmas Strand Bulb"
+msgstr "クリスマスストランド電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:93
+msgid "Xmas Three Bulb"
+msgstr "クリスマス3個の電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:94
+msgid "Xmas Wreath Bulb"
+msgstr "クリスマスリース電球"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:103
+msgid "Bulb Spacing"
+msgstr "電球間隔"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:121
+msgid "Strand Spacing"
+msgstr "ストランド間隔"
+
+#: ../inc.skyrmion.lightstrands/contents/ui/configLightstrands.qml:139
+msgid "Bulb Colors"
+msgstr "電球の色"
+
+#: ../inc.skyrmion.lightstrands/contents/config/config.qml:14
+msgid "Credits"
+msgstr "クレジット"
+

@@ -28,26 +28,37 @@ if [[ $EXISTS_AS_DESKTOP_ITEM == "0" ]]; then
     exit 1
 fi
 
-# Uninstall plasmoid between plasmashell stop/starts.
+# Try to uninstall the package.
+kpackagetool6 -t Plasma/Applet -r inc.skyrmion.lightstrands \
+    1>/dev/null 2>/dev/null
+UNINSTALLED=$?
 
-    # Try to uninstall the package.
-    kpackagetool6 -t Plasma/Applet -r inc.skyrmion.lightstrands \
-        1>/dev/null 2>/dev/null
-    UNINSTALLED=$?
+# Report results.
+if [[ "$UNINSTALLED" == "0" ]]; then
+    # Uninstall app icon available to "Add Widget panel".
+    sudo rm -f /usr/share/icons/hicolor/48x48/apps/lightstrands.png
+    sudo rm -f /usr/share/icons/hicolor/48x48/apps/lightstrands-credits.png
 
-    # Report results.
-    if [[ "$UNINSTALLED" == "0" ]]; then
-        echo ""
-        echo -e "${COLOR_YELLOW}""Stopping Plasmashell."
-        kquitapp6 plasmashell 1>/dev/null
-        echo -e "${COLOR_YELLOW}""Restarting Plasmashell."
-        kstart plasmashell
-        echo ""
-        echo -e "${COLOR_GREEN}""Lightstrands now uninstalled."
-        echo -e "${COLOR_NORMAL}"
-    else
-        echo ""
-        echo -e "${COLOR_YELLOW}""Lightstrands didn't require uninstall."
-        echo -e "${COLOR_NORMAL}"
-    fi
+    sudo rm -f /usr/share/locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo rm -f /usr/share/locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
 
+    echo ""
+    echo -e "${COLOR_YELLOW}""Stopping Plasmashell."
+    kquitapp6 plasmashell 1>/dev/null
+    echo -e "${COLOR_YELLOW}""Restarting Plasmashell."
+    kstart plasmashell
+    echo ""
+    echo -e "${COLOR_GREEN}""Lightstrands now uninstalled."
+    echo -e "${COLOR_NORMAL}"
+    exit 0
+fi
+
+echo ""
+echo -e "${COLOR_YELLOW}""Lightstrands didn't require uninstall."
+echo -e "${COLOR_NORMAL}"

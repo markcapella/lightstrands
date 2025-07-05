@@ -36,7 +36,7 @@ KCM.SimpleKCM {
 
     Kirigami.FormLayout {
          Item {
-            Kirigami.FormData.label: "Bulb Selection";
+            Kirigami.FormData.label: i18n("Bulb Selection");
             Kirigami.FormData.isSection: true;
         }
 
@@ -100,7 +100,7 @@ KCM.SimpleKCM {
 
 
         Item {
-            Kirigami.FormData.label: "Bulb Spacing";
+            Kirigami.FormData.label: i18n("Bulb Spacing");
             Kirigami.FormData.isSection: true;
         }
 
@@ -118,7 +118,7 @@ KCM.SimpleKCM {
 
 
         Item {
-            Kirigami.FormData.label: "Strand Spacing";
+            Kirigami.FormData.label: i18n("Strand Spacing");
             Kirigami.FormData.isSection: true;
         }
 
@@ -136,7 +136,7 @@ KCM.SimpleKCM {
 
 
         Item {
-            Kirigami.FormData.label: "Bulb Colors";
+            Kirigami.FormData.label: i18n("Bulb Colors");
             Kirigami.FormData.isSection: true;
         }
 

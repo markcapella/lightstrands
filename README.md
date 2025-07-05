@@ -2,20 +2,20 @@
 # lightstrands
 
 ## Install from Plasma Widgets panel.
-!['install'](https://github.com/markcapella/lightstrands/blob/main/screenshot_install.png)
+!['install'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_install.png)
 
 ## Configure bulb shapes, spacing, orientation & colors.
-!['configure'](https://github.com/markcapella/lightstrands/blob/main/screenshot_configure.png)
+!['configure'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_configure.png)
 
 ## Lightstrands Widget spins to match your backgrounds!
-!['left'](https://github.com/markcapella/lightstrands/blob/main/screenshot_spin.png)
+!['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_spin.png)
 
 ## Set one vertically left & right!
-!['left'](https://github.com/markcapella/lightstrands/blob/main/screenshot_left.png)
-!['right'](https://github.com/markcapella/lightstrands/blob/main/screenshot_right.png)
+!['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_left.png)
+!['right'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_right.png)
 
 ## Explore the shapes ... & contribute your own !
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/screenshot_everywhere.png)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_everywhere.png)
 
 ## Description.
 A twinkling, stretchable Holidays Lights Strand widget
@@ -28,7 +28,7 @@ A twinkling, stretchable Holidays Lights Strand widget
 
 ### Change into working source folder & make your dev tools executable.
     cd lightstrands
-    chmod 755 run install uninstall
+    chmod 755 run install uninstall restartShell
 ### (Optionally) Run the widget in an emulator for testing changes.
     ./run
     
@@ -36,7 +36,7 @@ A twinkling, stretchable Holidays Lights Strand widget
     ./install
 
 ### Then, mouse to the widgets panel and drop lightstrands onto your desktop.
-!['install2'](https://github.com/markcapella/lightstrands/blob/main/screenshot_install.png)
+!['install2'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_install.png)
 ### And you're ready to go! If ever required, you can uninstall the widget from the desktop widgets panel.
     ./uninstall
 

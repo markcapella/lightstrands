@@ -12,18 +12,6 @@ COLOR_BLUE='\e[0;34m'
 COLOR_NORMAL='\033[0m'
 
 
-# Uninstall it before it can be re-installed.
-./uninstall
-UNINSTALLED=$?
-
-if [[ "$UNINSTALLED" != "0" ]]; then
-    echo -e "${COLOR_YELLOW}""   (Lightstrands requires" \
-        "a successful uninstall"
-    echo "before it can be re-installed.)"
-    echo -e "${COLOR_NORMAL}"
-    exit 1
-fi
-
 # Try to install the package.
 kpackagetool6 -t Plasma/Applet -i inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
@@ -33,21 +21,70 @@ INSTALLED=$?
 if [[ "$INSTALLED" == "0" ]]; then
     echo -e "${COLOR_GREEN}""Lightstrands installed."
     echo -e "${COLOR_NORMAL}"
+    # Install app icon available to "Add Widget panel".
+    sudo cp 'images/lightstrands.png' \
+        /usr/share/icons/hicolor/48x48/apps/
+    sudo cp 'images/lightstrands-credits.png' \
+        /usr/share/icons/hicolor/48x48/apps/
+
+    sudo cp 'translate/de.mo' \
+        /usr/share/locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/es.mo' \
+        /usr/share/locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/fr.mo' \
+        /usr/share/locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/it.mo' \
+        /usr/share/locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/ja.mo' \
+        /usr/share/locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/nl.mo' \
+        /usr/share/locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/pt.mo' \
+        /usr/share/locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/ru.mo' \
+        /usr/share/locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+
+    ./restartShell
     exit 0
 fi
 
-if [[ "$INSTALLED" == "4" ]]; then
-    echo -e "${COLOR_RED}""Lightstrands is already installed."
-    echo ""
-    echo -e "${COLOR_YELLOW}""You must manually uninstall" \
-        "it before re-installing."
-    echo "   use: ./uninstall"
+# Else, try to update the package.
+kpackagetool6 -t Plasma/Applet -u inc.skyrmion.lightstrands \
+    1>/dev/null 2>/dev/null
+UPDATED=$?
+if [[ "$UPDATED" == "0" ]]; then
+    echo -e "${COLOR_GREEN}""Lightstrands updated."
     echo -e "${COLOR_NORMAL}"
-else
-    echo -e "${COLOR_RED}""Lightstrands cannot be installed."
-    echo "   (kpackagetool6 error: ""$INSTALLED "")."
-    echo ""
-    echo -e "${COLOR_YELLOW}""report bug to: "
-    echo "   https://github.com/markcapella/lightstrands/issues/new"
-    echo -e "${COLOR_NORMAL}"
+    # Install app icon available to "Add Widget panel".
+    sudo cp 'images/lightstrands.png' \
+        /usr/share/icons/hicolor/48x48/apps/
+    sudo cp 'images/lightstrands-credits.png' \
+        /usr/share/icons/hicolor/48x48/apps/
+
+    sudo cp 'translate/de.mo' \
+        /usr/share/locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/es.mo' \
+        /usr/share/locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/fr.mo' \
+        /usr/share/locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/it.mo' \
+        /usr/share/locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/ja.mo' \
+        /usr/share/locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/nl.mo' \
+        /usr/share/locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/pt.mo' \
+        /usr/share/locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+    sudo cp 'translate/ru.mo' \
+        /usr/share/locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+
+    ./restartShell
+    exit 0
 fi
+
+echo -e "${COLOR_RED}""Lightstrands cannot be installed."
+echo "   (kpackagetool6 error: ""$UPDATED "")."
+echo ""
+echo -e "${COLOR_YELLOW}""report bug to: "
+echo "   https://github.com/markcapella/lightstrands/issues/new"
+echo -e "${COLOR_NORMAL}"

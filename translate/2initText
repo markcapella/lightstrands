@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# *****************************************************
+# Clone template.pot to each base translated
+# language .po file.
+
+# Color styling.
+COLOR_RED='\e[0;31m'
+COLOR_GREEN='\e[1;32m'
+COLOR_YELLOW='\e[1;33m'
+COLOR_BLUE='\e[0;34m'
+COLOR_NORMAL='\033[0m'
+
+
+msginit -i template.pot -o de.po -l de --no-translator
+msginit -i template.pot -o es.po -l es --no-translator
+msginit -i template.pot -o fr.po -l fr --no-translator
+msginit -i template.pot -o it.po -l it --no-translator
+msginit -i template.pot -o ja.po -l ja --no-translator
+msginit -i template.pot -o nl.po -l nl --no-translator
+msginit -i template.pot -o pt.po -l pt --no-translator
+msginit -i template.pot -o ru.po -l ru --no-translator
