@@ -1,26 +1,30 @@
 
 # lightstrands
 
+## Description.
+A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE Plasma destop.
+&nbsp;
 ## Install from Plasma Widgets panel.
 !['install'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_install.png)
 
 ## Configure bulb shapes, spacing, orientation & colors.
 !['configure'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_configure.png)
 
-## Lightstrands Widget spins to match your backgrounds!
+## Lightstrands can be vertical, horizontal & spin !
 !['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_spin.png)
 
-## Set one vertically left & right!
-!['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_left.png)
-!['right'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_right.png)
+## Lightstrands can be mixed & matched to your backgrounds.
+!['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_match.png)
 
-## Explore the shapes ... & contribute your own !
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_everywhere.png)
+## Explore the colorable bulbs ... & contribute your own !
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/all_bulbs.png)
 
-## Description.
-A twinkling, stretchable Holidays Lights Strand widget
-(plasmoid) for your KDE Plasma destop.
-&nbsp;
+## In addition to English, Lightstrands also speaks German, Spanish, French, Italian, Japanese, Dutch, Portuguese & Russian.
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_languages.png)
+
+## PRO-TIP: Lightstrands goes well with Plasmasnow, for more holidays fun :)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_plasmasnow.png)
+
 ## Installation.
 
 ### Clone lightstrands working source folder.
