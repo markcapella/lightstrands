@@ -6,7 +6,7 @@ A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE P
 &nbsp;
 ## Install from Plasma Widgets panel.
 !['install'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_install.png)
-
+/home/mark/lightstrands/images/screenshot_install.png
 ## Configure bulb shapes, spacing, orientation & colors.
 !['configure'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_configure.png)
 
@@ -17,13 +17,13 @@ A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE P
 !['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_match.png)
 
 ## Explore the colorable bulbs ... & contribute your own !
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/all_bulbs.png)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/all_bulbs.png)
 
 ## In addition to English, Lightstrands also speaks German, Spanish, French, Italian, Japanese, Dutch, Portuguese & Russian.
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_languages.png)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_languages.png)
 
 ## PRO-TIP: Lightstrands goes well with Plasmasnow, for more holidays fun :)
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/images/main/screenshot_plasmasnow.png)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_plasmasnow.png)
 
 ## Installation.
 
