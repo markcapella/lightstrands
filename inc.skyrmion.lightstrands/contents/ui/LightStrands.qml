@@ -183,8 +183,8 @@ Item {
      ** onDestruction listener.
      **/
     Component.onDestruction: {
-        updateLightsTimer.stop();
-        isResizingCancelTimer.stop();
+        updateCanvasTimer.stop();
+        resizingCancelTimer.stop();
     }
 
     /** ************************************************
@@ -205,96 +205,170 @@ Item {
     }
 
     /** ************************************************
-     ** isResizingCancel timer definition.
+     ** resizingCancelTimer timer definition.
+     **
+     ** This allows us to suppress jaggy draw frames
+     ** during rapid applet resizes.
      **/
-    property int appletPrevXPos: -1;
-    property int appletPrevYPos: -1;
+    Item { Timer {
+        id: resizingCancelTimer;
 
-    Item {
-        Timer {
-            id: isResizingCancelTimer;
+        interval: 100;
+        repeat: true;
+        running: true;
 
-            interval: 100;
-            repeat: true;
-            running: true;
+        onTriggered: {
+            // Timer inactive.
+            if (!isResizing) {
+                return;
+            }
 
-            onTriggered: {
-                // Timer inactive.
-                if (!isResizing) {
-                    return;
-                }
+            // Resizing stops on edge case rollover.
+            var resizingNowTime = Date.now();
+            const DURATION = resizingNowTime -
+                resizingStartTime;
 
-                // Resizing stops on edge case rollover.
-                var resizingNowTime = Date.now();
-                const DURATION = resizingNowTime -
-                    resizingStartTime;
+            if (DURATION < 0) {
+                Lights.initLightsModule();
+                mCanvas.requestPaint();
+                isResizing = false;
+                return;
+            }
 
-                if (DURATION < 0) {
-                    Lights.initLightsModule();
-                    mCanvas.requestPaint();
-                    isResizing = false;
-                    return;
-                }
-
-                // Resizing stops after duration.
-                if (DURATION > mCFG.resizingCancelTimeMS) {
-                    Lights.initLightsModule();
-                    mCanvas.requestPaint();
-                    isResizing = false;
-                    return;
-                }
+            // Resizing stops after duration.
+            if (DURATION > mCFG.resizingCancelTimeMS) {
+                Lights.initLightsModule();
+                mCanvas.requestPaint();
+                isResizing = false;
+                return;
             }
         }
+    }}
+
+    /** ************************************************
+     ** updateCanvasTimer timer definition.
+     **
+     ** This allows us to suppress update/draw jag
+     ** while applet in editMode or user is drag-
+     ** selecting on the plasma desktop.
+     **/
+    Item { Timer {
+        id: updateCanvasTimer;
+
+        interval: 500;
+        repeat: true;
+        running: true;
+
+        onTriggered: {
+            if (!isCanvasAvailable) {
+                return;
+            }
+            if (isAppletInEditMode()) {
+                return;
+            }
+            if (isRubberBandActive()) {
+                return;
+            }
+
+            // Update lights / twinkle.
+            Lights.updateCanvasFrame();
+            mCanvas.requestPaint();
+        }
+    }}
+
+    /** ************************************************
+     ** If applet in editMode, user could be dragging
+     ** or sizing it, so we skip color update draws to
+     ** avoid screen jag.
+     **/
+    property var editModeNode: null;
+    property bool editModeNodeSet: false;
+
+    function isAppletInEditMode() {
+        if (!editModeNodeSet) {
+            editModeNode = getEditNode();
+            editModeNodeSet = true;
+        }
+
+        return editModeNode ?
+            editModeNode.editMode : null;
+    }
+
+    function getEditNode() {
+        return getAncesterNode(lightstrands,
+            "BasicAppletContainer");
     }
 
     /** ************************************************
-     ** updateCanvasFrame timer definition.
+     ** User click & dragging on desktop displays
+     ** selection-box "rubberband" for dragging desktop
+     ** icons. This is also jaggy unless we avoid
+     ** update draws.
      **/
-    Item {
-        Timer {
-            id: updateLightsTimer;
+    property var rubberBandNode: null;
+    property bool rubberBandNodeSet: false;
 
-            interval: 500;
-            repeat: true;
-            running: true;
+    function isRubberBandActive() {
+        if (!rubberBandNodeSet) {
+            rubberBandNode = getRubberBandNode();
+            rubberBandNodeSet = true;
+        }
 
-            onTriggered: {
-                if (!isCanvasAvailable) {
-                    return;
-                }
+        return rubberBandNode ?
+            rubberBandNode.rubberBand : null;
+    }
 
-                // Avoid screen jag on sizing.
-                if (isResizing) {
-                    return;
-                }
+    function getRubberBandNode() {
+        const LAYOUT = getAncesterNode(
+            lightstrands, "AppletsLayout");
+        if (!LAYOUT) {
+            return null;
+        }
 
-                // Find parent node that has our applet X/Y pos;
-                var appletXPos = -1;
-                var appletYPos = -1;
+        const LOADER = getChildNode(
+            LAYOUT, "QQuickLoader");
+        if (!LOADER) {
+            return null;
+        }
 
-                var node = lightstrands;
-                while (node) {
-                    if (node.toString().indexOf(
-                        "BasicAppletContainer") != -1) {
-                        appletXPos = node.x;
-                        appletYPos = node.y;
-                        break;
-                    }
-                    node = node.parent;
-                }
+        const FOLDERLAYER = getChildNode(
+            LOADER, "FolderViewLayer");
+        if (!FOLDERLAYER) {
+            return null;
+        }
 
-                // If applet has moved, user is dragging it, so we
-                // skip color update (& draw), avoiding mouse jag.
-                if (appletPrevXPos != appletXPos ||
-                    appletPrevYPos != appletYPos) {
-                    appletPrevXPos = appletXPos;
-                    appletPrevYPos = appletYPos;
-                    return;
-                }
+        return getChildNode(FOLDERLAYER,
+            "FolderView");
+    }
 
-                Lights.updateCanvasFrame();
-                mCanvas.requestPaint();
+    /** ************************************************
+     ** Helper method to get an ancester of a
+     ** node with a particular type.
+     **/
+    function getAncesterNode(node, type) {
+        var temp = node;
+
+        while (temp) {
+            if (temp.toString().indexOf(type) != -1) {
+                return temp;
+            }
+            temp = temp.parent;
+        }
+
+        return null;
+    }
+
+    /** ************************************************
+     ** Helper method to get a child of a
+     ** node with a particular type.
+     **/
+    function getChildNode(node, type) {
+        for (var temp of node.children) {
+            if (temp.toString().indexOf(type) != -1) {
+                return temp;
             }
         }
+
+        return null;
     }
 }

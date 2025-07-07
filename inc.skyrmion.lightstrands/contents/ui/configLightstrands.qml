@@ -33,7 +33,6 @@ KCM.SimpleKCM {
     property int cfg_resizingCancelTimeMS:
         resizingCancelTimeMS;
 
-
     Kirigami.FormLayout {
          Item {
             Kirigami.FormData.label: i18n("Bulb Selection");
