@@ -188,17 +188,6 @@ Item {
     }
 
     /** ************************************************
-     ** mouseArea definition.
-     **/
-    readonly property alias mouseArea: mouseArea
-
-    MouseArea {
-        id: mouseArea
-        anchors.fill: parent
-        hoverEnabled: true
-    }
-
-    /** ************************************************
      ** Canvas definition.
      **/
     property bool isCanvasAvailable: false
@@ -216,34 +205,11 @@ Item {
     }
 
     /** ************************************************
-     ** updateCanvasFrame timer definition.
-     **/
-    Item {
-        Timer {
-            id: updateLightsTimer;
-
-            interval: 500;
-            repeat: true;
-            running: true;
-
-            onTriggered: {
-                if (!isCanvasAvailable) {
-                    return;
-                }
-                if (isResizing) {
-                    return;
-                }
-
-                // Okay to update canvas;
-                Lights.updateCanvasFrame();
-                mCanvas.requestPaint();
-            }
-        }
-    }
-
-    /** ************************************************
      ** isResizingCancel timer definition.
      **/
+    property int appletPrevXPos: -1;
+    property int appletPrevYPos: -1;
+
     Item {
         Timer {
             id: isResizingCancelTimer;
@@ -253,6 +219,7 @@ Item {
             running: true;
 
             onTriggered: {
+                // Timer inactive.
                 if (!isResizing) {
                     return;
                 }
@@ -276,6 +243,57 @@ Item {
                     isResizing = false;
                     return;
                 }
+            }
+        }
+    }
+
+    /** ************************************************
+     ** updateCanvasFrame timer definition.
+     **/
+    Item {
+        Timer {
+            id: updateLightsTimer;
+
+            interval: 500;
+            repeat: true;
+            running: true;
+
+            onTriggered: {
+                if (!isCanvasAvailable) {
+                    return;
+                }
+
+                // Avoid screen jag on sizing.
+                if (isResizing) {
+                    return;
+                }
+
+                // Find parent node that has our applet X/Y pos;
+                var appletXPos = -1;
+                var appletYPos = -1;
+
+                var node = lightstrands;
+                while (node) {
+                    if (node.toString().indexOf(
+                        "BasicAppletContainer") != -1) {
+                        appletXPos = node.x;
+                        appletYPos = node.y;
+                        break;
+                    }
+                    node = node.parent;
+                }
+
+                // If applet has moved, user is dragging it, so we
+                // skip color update (& draw), avoiding mouse jag.
+                if (appletPrevXPos != appletXPos ||
+                    appletPrevYPos != appletYPos) {
+                    appletPrevXPos = appletXPos;
+                    appletPrevYPos = appletYPos;
+                    return;
+                }
+
+                Lights.updateCanvasFrame();
+                mCanvas.requestPaint();
             }
         }
     }

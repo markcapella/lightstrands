@@ -704,7 +704,7 @@ function drawCanvasFrame() {
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
-        if (mBulbNeedsRedraw[i]) {
+        if (mBulbNeedsRedraw[i] == true) {
             drawBulb(i);
             mBulbNeedsRedraw[i] = false;
         }
