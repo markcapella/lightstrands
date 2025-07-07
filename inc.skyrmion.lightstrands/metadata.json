@@ -1,28 +1,37 @@
 
 {
-    "KPackageStructure": "Plasma/Applet",
-    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPackageStructure" : "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version" : "6.0",
 
-    "Keyword": "xmas holiday light strand",
+    "Keyword" : "xmas holiday light strand",
 
-    "KPlugin": {
-        "Id": "inc.skyrmion.lightstrands",
-        "Icon": "lightstrands",
-        "Category": "Fun and Games",
+    "KPlugin" : {
+        "Id" : "inc.skyrmion.lightstrands",
+        "Icon" : "lightstrands",
+        "Category" : "Fun and Games",
 
-        "Name": "LightStrands",
-        "Description":
-            "A twinkling, stretchable Holidays Lights Strand.",
-        "Version": "2025-07-07",
+        "Name" : "LightStrands",
+        "Version" : "2025-07-07 17:57",
 
-        "Authors": [{
+        "Description" : "A twinkling, stretchable Holidays Lights Strand.",
+
+        "Description[de]" : "Ein funkelnder, dehnbarer Feiertage -Lichter -Strang.",
+        "Description[es]" : "Un spland centelleante y estirable de vacaciones.",
+        "Description[fr]" : "Un brin de fêtes scintillable et extensible.",
+        "Description[it]" : "Un giro di vacanze scintillanti e elandesi si accende.",
+        "Description[ja]" : "きらめく、伸縮性のある休日のライトストランド。",
+        "Description[nl]" : "Een fonkelende, rekbare vakantielichten streng.",
+        "Description[pt]" : "Uma fita de férias cintilantes e esticadas.",
+        "Description[ru]" : "Мерцающая, растягивающаяся праздничная прядь.",
+
+        "Authors" : [{
              "Email": "markjamescapella@proton.me",
              "Name": "Mark Capella"
          }],
 
-        "Website":
+        "Website" :
             "https://github.com/markcapella/Lightstrands",
-        "BugReportUrl":
+        "BugReportUrl ":
             "https://github.com/markcapella/lightstrands/issues/new"
     }
 }
