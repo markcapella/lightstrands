@@ -17,7 +17,7 @@ A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE P
 !['left'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_match.png)
 
 ## Explore the colorable bulbs ... & contribute your own !
-!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/all_bulbs.png)
+!['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_all_bulbs.png)
 
 ## In addition to English, Lightstrands also speaks German, Spanish, French, Italian, Japanese, Dutch, Portuguese & Russian.
 !['everywhere'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_languages.png)
@@ -30,16 +30,14 @@ A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE P
 ### Clone lightstrands working source folder.
     git clone https://github.com/markcapella/lightstrands
 
-### Change into working source folder & make your dev tools executable.
+### Change into working source folder & make your install tools executable.
     cd lightstrands
-    chmod 755 run install uninstall restartShell
-### (Optionally) Run the widget in an emulator for testing changes.
-    ./run
-    
-### Install the widget to the desktop widgets panel.
+    chmod 755 run install uninstall
+
+### Install the widget to the Add or Manage Widgets panel.
     ./install
 
-### Then, mouse to the widgets panel and drop lightstrands onto your desktop.
+### Then, mouse to the Add or Manage Widgets and drop lightstrands onto your desktop.
 !['install2'](https://github.com/markcapella/lightstrands/blob/main/images/screenshot_install.png)
 ### And you're ready to go! If ever required, you can uninstall the widget from the desktop widgets panel.
     ./uninstall

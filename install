@@ -11,80 +11,80 @@ COLOR_YELLOW='\e[1;33m'
 COLOR_BLUE='\e[0;34m'
 COLOR_NORMAL='\033[0m'
 
+# Install targets.
+ICONS_TARGET="/usr/share/icons/hicolor/48x48/apps/"
+
+LANGS_DIR="translate/locale"
+LANGS_PREFIX="plasma_applet_inc.skyrmion.lightstrands"
+LANGS_TARGET="/usr/share/locale"
+
+
+# *****************************************************
+# Helper method to process actual install
+# commands after other verifications.
+#
+doPlasmoidInstall() {
+    # Install app branding.
+    sudo cp 'images/lightstrands.png' "$ICONS_TARGET"
+    sudo cp 'images/lightstrands-credits.png' "$ICONS_TARGET"
+
+    # Install i18n catalog files.
+    sudo cp "$LANGS_DIR""/de/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/de/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/es/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/es/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/fr/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/fr/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/it/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/it/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/ja/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/ja/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/nl/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/nl/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/pt/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/pt/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+    sudo cp "$LANGS_DIR""/ru/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
+        "$LANGS_TARGET""/ru/LC_MESSAGES/""$LANGS_PREFIX"".mo"
+
+    # Restart plasmashell.
+    kquitapp6 plasmashell 1>/dev/null
+    kstart plasmashell
+}
+
+
+# *****************************************************
+# Main proces.
+#
 
 # Try to install the package.
 kpackagetool6 -t Plasma/Applet -i inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
 INSTALLED=$?
-
-# Report results.
 if [[ "$INSTALLED" == "0" ]]; then
-    echo -e "${COLOR_GREEN}""Lightstrands installed."
-    echo -e "${COLOR_NORMAL}"
-    # Install app icon available to "Add Widget panel".
-    sudo cp 'images/lightstrands.png' \
-        /usr/share/icons/hicolor/48x48/apps/
-    sudo cp 'images/lightstrands-credits.png' \
-        /usr/share/icons/hicolor/48x48/apps/
-
-    sudo cp 'translate/de.mo' \
-        /usr/share/locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/es.mo' \
-        /usr/share/locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/fr.mo' \
-        /usr/share/locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/it.mo' \
-        /usr/share/locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/ja.mo' \
-        /usr/share/locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/nl.mo' \
-        /usr/share/locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/pt.mo' \
-        /usr/share/locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/ru.mo' \
-        /usr/share/locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-
-    ./restartShell
+    doPlasmoidInstall
+    echo
+    echo -e "${COLOR_GREEN}""Lightstrands installed." \
+        "${COLOR_NORMAL}"
     exit 0
 fi
 
-# Else, try to update the package.
+# Else, update the package.
 kpackagetool6 -t Plasma/Applet -u inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
 UPDATED=$?
 if [[ "$UPDATED" == "0" ]]; then
-    echo -e "${COLOR_GREEN}""Lightstrands updated."
-    echo -e "${COLOR_NORMAL}"
-    # Install app icon available to "Add Widget panel".
-    sudo cp 'images/lightstrands.png' \
-        /usr/share/icons/hicolor/48x48/apps/
-    sudo cp 'images/lightstrands-credits.png' \
-        /usr/share/icons/hicolor/48x48/apps/
-
-    sudo cp 'translate/de.mo' \
-        /usr/share/locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/es.mo' \
-        /usr/share/locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/fr.mo' \
-        /usr/share/locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/it.mo' \
-        /usr/share/locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/ja.mo' \
-        /usr/share/locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/nl.mo' \
-        /usr/share/locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/pt.mo' \
-        /usr/share/locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-    sudo cp 'translate/ru.mo' \
-        /usr/share/locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
-
-    ./restartShell
+    doPlasmoidInstall
+    echo
+    echo -e "${COLOR_GREEN}""Lightstrands updated." \
+        "${COLOR_NORMAL}"
     exit 0
 fi
 
+# Else, error. This should be unreachable.
+echo
 echo -e "${COLOR_RED}""Lightstrands cannot be installed."
 echo "   (kpackagetool6 error: ""$UPDATED "")."
-echo ""
+echo
 echo -e "${COLOR_YELLOW}""report bug to: "
-echo "   https://github.com/markcapella/lightstrands/issues/new"
-echo -e "${COLOR_NORMAL}"
+echo "   https://github.com/markcapella/lightstrands/issues/new"\
+    "${COLOR_NORMAL}"

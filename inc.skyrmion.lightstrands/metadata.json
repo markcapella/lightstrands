@@ -11,9 +11,8 @@
         "Category" : "Fun and Games",
 
         "Name" : "LightStrands",
-        "Version" : "2025-07-07 17:57",
-
         "Description" : "A twinkling, stretchable Holidays Lights Strand.",
+        "Version" : "2025-07-12 19:57",
 
         "Description[de]" : "Ein funkelnder, dehnbarer Feiertage -Lichter -Strang.",
         "Description[es]" : "Un spland centelleante y estirable de vacaciones.",
@@ -31,7 +30,7 @@
 
         "Website" :
             "https://github.com/markcapella/Lightstrands",
-        "BugReportUrl ":
+        "BugReportUrl":
             "https://github.com/markcapella/lightstrands/issues/new"
     }
 }

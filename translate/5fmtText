@@ -12,11 +12,19 @@ COLOR_BLUE='\e[0;34m'
 COLOR_NORMAL='\033[0m'
 
 
-msgfmt -v deTranslated.po -o de.mo
-msgfmt -v esTranslated.po -o es.mo
-msgfmt -v frTranslated.po -o fr.mo
-msgfmt -v itTranslated.po -o it.mo
-msgfmt -v jaTranslated.po -o ja.mo
-msgfmt -v nlTranslated.po -o nl.mo
-msgfmt -v ptTranslated.po -o pt.mo
-msgfmt -v ruTranslated.po -o ru.mo
+msgfmt -v deTranslated.po -o \
+    locale/de/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v esTranslated.po -o \
+    locale/es/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v frTranslated.po -o \
+    locale/fr/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v itTranslated.po -o \
+    locale/it/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v jaTranslated.po -o \
+    locale/ja/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v nlTranslated.po -o \
+    locale/nl/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v ptTranslated.po -o \
+    locale/pt/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo
+msgfmt -v ruTranslated.po -o \
+    locale/ru/LC_MESSAGES/plasma_applet_inc.skyrmion.lightstrands.mo

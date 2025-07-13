@@ -263,10 +263,20 @@ Item {
             if (!isCanvasAvailable) {
                 return;
             }
+            // Desktop edit mode for "add widgets".
+            if (Plasmoid.containment.corona.editMode) {
+                return;
+            }
+            // Long-press widget edit w/ handles.
             if (isAppletInEditMode()) {
                 return;
             }
+            // Plasmashell desktop rubberband.
             if (isRubberBandActive()) {
+                return;
+            }
+            // Timer inactive.
+            if (isResizing) {
                 return;
             }
 

@@ -48,7 +48,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "AmericanBulb.png";
+                    source: "bulbPngs/AmericanBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -61,7 +61,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "BalloonsBulb.png";
+                    source: "bulbPngs/BalloonsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -74,7 +74,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "CandleBulb.png";
+                    source: "bulbPngs/CandleBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -87,7 +87,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "CloverBulb.png";
+                    source: "bulbPngs/CloverBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -108,7 +108,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "ColonyHatBulb.png";
+                    source: "bulbPngs/ColonyHatBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -121,7 +121,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "DottedEggBulb.png";
+                    source: "bulbPngs/DottedEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -134,7 +134,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "DrinksBulb.png";
+                    source: "bulbPngs/DrinksBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -147,7 +147,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "EasterBunnyBulb.png";
+                    source: "bulbPngs/EasterBunnyBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -168,7 +168,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "EasterChickBulb.png";
+                    source: "bulbPngs/EasterChickBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -181,7 +181,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "EasterEggBulb.png";
+                    source: "bulbPngs/EasterEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -194,7 +194,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "EasterSignBulb.png";
+                    source: "bulbPngs/EasterSignBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -207,7 +207,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "FancyCloverBulb.png";
+                    source: "bulbPngs/FancyCloverBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -228,7 +228,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "FireworksBulb.png";
+                    source: "bulbPngs/FireworksBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -241,7 +241,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "FlowerVaseBulb.png";
+                    source: "bulbPngs/FlowerVaseBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -254,7 +254,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "GhostBulb.png";
+                    source: "bulbPngs/GhostBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -267,7 +267,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "HalloweenBulb.png";
+                    source: "bulbPngs/HalloweenBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -288,7 +288,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "HeartBulb.png";
+                    source: "bulbPngs/HeartBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -301,7 +301,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "HeartsBulb.png";
+                    source: "bulbPngs/HeartsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -314,7 +314,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "HeartStarBulb.png";
+                    source: "bulbPngs/HeartStarBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -327,7 +327,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "IrishBulb.png";
+                    source: "bulbPngs/IrishBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -348,7 +348,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "IrishHatBulb.png";
+                    source: "bulbPngs/IrishHatBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -361,7 +361,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "LobsterBulb.png";
+                    source: "bulbPngs/LobsterBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -374,7 +374,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "LobsterUpBulb.png";
+                    source: "bulbPngs/LobsterUpBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -387,7 +387,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "NewYearsBulb.png";
+                    source: "bulbPngs/NewYearsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -408,7 +408,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "PartyBulb.png";
+                    source: "bulbPngs/PartyBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -421,7 +421,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "PlainEasterEggBulb.png";
+                    source: "bulbPngs/PlainEasterEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -434,7 +434,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "PotOfGoldBulb.png";
+                    source: "bulbPngs/PotOfGoldBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -447,7 +447,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "PumpkinBulb.png";
+                    source: "bulbPngs/PumpkinBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -468,7 +468,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "PumpkinPieBulb.png";
+                    source: "bulbPngs/PumpkinPieBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -481,7 +481,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "RibbonsBulb.png";
+                    source: "bulbPngs/RibbonsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -494,7 +494,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "RocketBulb.png";
+                    source: "bulbPngs/RocketBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -507,7 +507,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "SantaBootsBulb.png";
+                    source: "bulbPngs/SantaBootsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -528,7 +528,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "SkullBulb.png";
+                    source: "bulbPngs/SkullBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -541,7 +541,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "SnowFlakeBulb.png";
+                    source: "bulbPngs/SnowFlakeBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -554,7 +554,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "SparklyCandleBulb.png";
+                    source: "bulbPngs/SparklyCandleBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -567,7 +567,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "StarsBulb.png";
+                    source: "bulbPngs/StarsBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -588,7 +588,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "TurkeyLeftBulb.png";
+                    source: "bulbPngs/TurkeyLeftBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -601,7 +601,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "TurkeyRightBulb.png";
+                    source: "bulbPngs/TurkeyRightBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -614,7 +614,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "WavyEggBulb.png";
+                    source: "bulbPngs/WavyEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -627,7 +627,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasBulb.png";
+                    source: "bulbPngs/XmasBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -648,7 +648,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasFancyBulb.png";
+                    source: "bulbPngs/XmasFancyBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -661,7 +661,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasHollyBulb.png";
+                    source: "bulbPngs/XmasHollyBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -674,7 +674,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasRoundBulb.png";
+                    source: "bulbPngs/XmasRoundBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -687,7 +687,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasStrandBulb.png";
+                    source: "bulbPngs/XmasStrandBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {
@@ -708,7 +708,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasThreeBulb.png";
+                    source: "bulbPngs/XmasThreeBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 Text {
@@ -721,7 +721,7 @@ KCM.SimpleKCM {
             Column {
                 Image {
                     horizontalAlignment: Text.AlignHCenter;
-                    source: "XmasWreathBulb.png";
+                    source: "bulbPngs/XmasWreathBulb.png";
                     fillMode: Image.PreserveAspectFit;
                 }
                 QtControls.Label {

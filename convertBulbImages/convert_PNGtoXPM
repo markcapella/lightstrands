@@ -1,0 +1,1 @@
+for f in $(ls -1 | egrep "\.png$"); do convert "$f" -colors 2 "${f%.*}".xpm; done
