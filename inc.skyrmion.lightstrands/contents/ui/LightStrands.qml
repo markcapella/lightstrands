@@ -267,7 +267,11 @@ Item {
             if (Plasmoid.containment.corona.editMode) {
                 return;
             }
-            // Long-press widget edit w/ handles.
+            // User is changing prefs.
+            if (Plasmoid.userConfiguring) {
+                return;
+            }
+            // Long-press toolbar w/ handles.
             if (isAppletInEditMode()) {
                 return;
             }

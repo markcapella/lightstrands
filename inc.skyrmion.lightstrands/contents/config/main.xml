@@ -25,7 +25,7 @@
     </entry>
 
     <entry name="resizingCancelTimeMS" type="Int">
-      <default>75</default>
+      <default>175</default>
     </entry>
 
     <!-- Bulb Selection prefs. -->
