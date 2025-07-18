@@ -34,7 +34,7 @@ KCM.SimpleKCM {
         resizingCancelTimeMS;
 
     Kirigami.FormLayout {
-         Item {
+        Item {
             Kirigami.FormData.label: i18n("Bulb Selection");
             Kirigami.FormData.isSection: true;
         }
@@ -96,7 +96,6 @@ KCM.SimpleKCM {
             onCurrentIndexChanged:
                 cfg_chosenBulb = currentIndex;
         }
-
 
         Item {
             Kirigami.FormData.label: i18n("Bulb Spacing");

@@ -38,7 +38,8 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true;
         }
 
-        // i18n("American Bulb"), i18n("Balloons Bulb"), i18n("Candle Bulb"), i18n("Clover Bulb"),
+        // i18n("American Bulb"), i18n("Balloons Bulb"),
+        // i18n("Candle Bulb"), i18n("Clover Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -50,6 +51,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/AmericanBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 0;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -63,8 +70,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/BalloonsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 1;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Balloons Bulb");
@@ -76,8 +89,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/CandleBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 2;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Candle Bulb");
@@ -89,8 +108,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/CloverBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 3;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Clover Bulb");
@@ -98,7 +123,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Colony Hat Bulb"), i18n("Dotted Egg Bulb"), i18n("Drinks Bulb"), i18n("Easter Bunny Bulb"),
+        // i18n("Colony Hat Bulb"), i18n("Dotted Egg Bulb"),
+        // i18n("Drinks Bulb"), i18n("Easter Bunny Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -110,6 +136,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/ColonyHatBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 4;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -123,8 +155,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/DottedEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 5;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Dotted Egg Bulb");
@@ -136,8 +174,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/DrinksBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 6;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Drinks Bulb");
@@ -149,8 +193,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/EasterBunnyBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 7;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Easter Bunny Bulb");
@@ -158,7 +208,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Easter Chick Bulb"), i18n("Easter Egg Bulb"), i18n("Easter Sign Bulb"), i18n("Fancy Clover Bulb"),
+        // i18n("Easter Chick Bulb"), i18n("Easter Egg Bulb"),
+        // i18n("Easter Sign Bulb"), i18n("Fancy Clover Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -170,6 +221,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/EasterChickBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 8;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -183,8 +240,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/EasterEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 9;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Easter Egg Bulb");
@@ -196,8 +259,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/EasterSignBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 10;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Easter Sign Bulb");
@@ -209,8 +278,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/FancyCloverBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 11;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Fancy Clover Bulb");
@@ -218,7 +293,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Fireworks Bulb"), i18n("Flower Vase Bulb"), i18n("Ghost Bulb"), i18n("Halloween Bulb"),
+        // i18n("Fireworks Bulb"), i18n("Flower Vase Bulb"),
+        // i18n("Ghost Bulb"), i18n("Halloween Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -230,6 +306,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/FireworksBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 12;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -243,8 +325,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/FlowerVaseBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 13;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Flower Vase Bulb");
@@ -256,8 +344,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/GhostBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 14;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Ghost Bulb");
@@ -269,8 +363,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/HalloweenBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 15;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Halloween Bulb");
@@ -278,7 +378,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Heart Bulb"), i18n("Hearts Bulb"), i18n("Heart Star Bulb"), i18n("Irish Bulb"),
+        // i18n("Heart Bulb"), i18n("Hearts Bulb"),
+        // i18n("Heart Star Bulb"), i18n("Irish Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -290,6 +391,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/HeartBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 16;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -303,8 +410,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/HeartsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 17;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Hearts Bulb");
@@ -316,8 +429,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/HeartStarBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 18;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Heart Star Bulb");
@@ -329,8 +448,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/IrishBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 19;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Irish Bulb");
@@ -338,7 +463,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Irish Hat Bulb"), i18n("Lobster Bulb"), i18n("Lobster Up Bulb"), i18n("New Years Bulb"),
+        // i18n("Irish Hat Bulb"), i18n("Lobster Bulb"),
+        // i18n("Lobster Up Bulb"), i18n("New Years Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -350,6 +476,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/IrishHatBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 20;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -363,8 +495,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/LobsterBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 21;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Lobster Bulb");
@@ -376,8 +514,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/LobsterUpBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 22;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Lobster Up Bulb");
@@ -389,8 +533,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/NewYearsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 23;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("New Years Bulb");
@@ -398,7 +548,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Party Bulb"), i18n("Plain Easter Egg Bulb"), i18n("Pot Of Gold Bulb"), i18n("Pumpkin Bulb"),
+        // i18n("Party Bulb"), i18n("Plain Easter Egg Bulb"),
+        // i18n("Pot Of Gold Bulb"), i18n("Pumpkin Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -410,6 +561,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/PartyBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 24;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -423,8 +580,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/PlainEasterEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 25;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Plain Easter Egg Bulb");
@@ -436,8 +599,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/PotOfGoldBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 26;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Pot Of Gold Bulb");
@@ -449,8 +618,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/PumpkinBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 27;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Pumpkin Bulb");
@@ -458,7 +633,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Pumpkin Pie Bulb"), i18n("Ribbons Bulb"), i18n("Rocket Bulb"), i18n("Santa Boots Bulb"),
+        // i18n("Pumpkin Pie Bulb"), i18n("Ribbons Bulb"),
+        // i18n("Rocket Bulb"), i18n("Santa Boots Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -470,6 +646,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/PumpkinPieBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 28;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -483,8 +665,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/RibbonsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 29;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Ribbons Bulb");
@@ -496,8 +684,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/RocketBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 30;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Rocket Bulb");
@@ -509,8 +703,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/SantaBootsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 31;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Santa Boots Bulb");
@@ -518,7 +718,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Skull Bulb"), i18n("Snow Flake Bulb"), i18n("Sparkly Candle Bulb"), i18n("Stars Bulb"),
+        // i18n("Skull Bulb"), i18n("Snow Flake Bulb"),
+        // i18n("Sparkly Candle Bulb"), i18n("Stars Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -530,6 +731,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/SkullBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 32;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -543,8 +750,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/SnowFlakeBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 33;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Snow Flake Bulb");
@@ -556,8 +769,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/SparklyCandleBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 34;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Sparkly Candle Bulb");
@@ -569,8 +788,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/StarsBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 35;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Stars Bulb");
@@ -578,7 +803,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Turkey Left Bulb"), i18n("Turkey Right Bulb"), i18n("Wavy Egg Bulb"), i18n("Xmas Bulb"),
+        // i18n("Turkey Left Bulb"), i18n("Turkey Right Bulb"),
+        // i18n("Wavy Egg Bulb"), i18n("Xmas Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -590,6 +816,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/TurkeyLeftBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 36;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -603,8 +835,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/TurkeyRightBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 37;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Turkey Right Bulb");
@@ -616,8 +854,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/WavyEggBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 38;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Wavy Egg Bulb");
@@ -629,8 +873,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 39;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Xmas Bulb");
@@ -638,7 +888,8 @@ KCM.SimpleKCM {
             }
         }
 
-        // i18n("Xmas Fancy Bulb"), i18n("Xmas Holly Bulb"), i18n("Xmas Round Bulb"), i18n("Xmas Strand Bulb"),
+        // i18n("Xmas Fancy Bulb"), i18n("Xmas Holly Bulb"),
+        // i18n("Xmas Round Bulb"), i18n("Xmas Strand Bulb"),
         Row {
             anchors{
                 horizontalCenter: parent.horizontalCenter
@@ -650,6 +901,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasFancyBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 40;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -663,8 +920,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasHollyBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 41;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Xmas Holly Bulb");
@@ -676,8 +939,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasRoundBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 42;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Xmas Round Bulb");
@@ -689,8 +958,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasStrandBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 43;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Xmas Strand Bulb");
@@ -710,6 +985,12 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasThreeBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 44;
+                        }
+                    }
                 }
                 Text {
                     horizontalAlignment: Text.AlignHCenter;
@@ -723,8 +1004,14 @@ KCM.SimpleKCM {
                     horizontalAlignment: Text.AlignHCenter;
                     source: "bulbPngs/XmasWreathBulb.png";
                     fillMode: Image.PreserveAspectFit;
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            plasmoid.configuration.chosenBulb = 45;
+                        }
+                    }
                 }
-                QtControls.Label {
+                Text {
                     horizontalAlignment: Text.AlignHCenter;
                     font.weight: Font.Bold;
                     text: i18n("Xmas Wreath Bulb");

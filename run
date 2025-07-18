@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# *****************************************************
+# Run the lightstrands desktop widget in the
+# emulator.
+
+# Color styling.
+COLOR_RED='\e[0;31m'
+COLOR_GREEN='\e[1;32m'
+COLOR_YELLOW='\e[1;33m'
+COLOR_BLUE='\e[0;34m'
+COLOR_NORMAL='\033[0m'
+
+
+# Start the emulator in French.
+# LANGUAGE=fr plasmoidviewer -a  inc.skyrmion.lightstrands/
+
+# Start the emulator.
+plasmoidviewer -a inc.skyrmion.lightstrands/
