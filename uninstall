@@ -37,20 +37,6 @@ if [[ $EXISTS_AS_DESKTOP_ITEM == "0" ]]; then
     exit 1
 fi
 
-# Uninstall app branding.
-sudo rm -f "$ICONS_TARGET""lightstrands.png"
-sudo rm -f "$ICONS_TARGET""lightstrands-credits.png"
-
-# Uninstall i18n catalog files.
-sudo rm -f "$LANGS_TARGET""/de/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/es/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/fr/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/it/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/ja/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/nl/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/pt/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-sudo rm -f "$LANGS_TARGET""/ru/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-
 # Uninstall the package.
 kpackagetool6 -t Plasma/Applet -r inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null

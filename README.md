@@ -30,9 +30,8 @@ A twinkling, stretchable Holidays Lights Strand widget (plasmoid) for your KDE P
 ### Clone lightstrands working source folder.
     git clone https://github.com/markcapella/lightstrands
 
-### Change into working source folder & make your install tools executable.
+### Change into working source folder.
     cd lightstrands
-    chmod 755 install run uninstall
 
 ### Install the widget to the Add or Manage Widgets panel.
     ./install

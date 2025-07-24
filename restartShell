@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # *****************************************************
-# Run the lightstrands desktop widget in the
-# emulator.
+# Restart the plasma-shell.
 
 # Color styling.
 COLOR_RED='\e[0;31m'
@@ -11,5 +10,7 @@ COLOR_YELLOW='\e[1;33m'
 COLOR_BLUE='\e[0;34m'
 COLOR_NORMAL='\033[0m'
 
-# Start the emulator.
-plasmoidviewer -a inc.skyrmion.lightstrands/
+
+# Restart plasmashell.
+kquitapp6 plasmashell 1>/dev/null
+kstart plasmashell

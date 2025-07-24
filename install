@@ -12,44 +12,11 @@ COLOR_BLUE='\e[0;34m'
 COLOR_NORMAL='\033[0m'
 
 # Install targets.
-ICONS_TARGET="/usr/share/icons/hicolor/48x48/apps/"
-
 LANGS_DIR="translate/locale"
 LANGS_PREFIX="plasma_applet_inc.skyrmion.lightstrands"
+
+ICONS_TARGET="/usr/share/icons/hicolor/48x48/apps/"
 LANGS_TARGET="/usr/share/locale"
-
-
-# *****************************************************
-# Helper method to process actual install
-# commands after other verifications.
-#
-doPlasmoidInstall() {
-    # Install app branding.
-    sudo cp 'images/lightstrands.png' "$ICONS_TARGET"
-    sudo cp 'images/lightstrands-credits.png' "$ICONS_TARGET"
-
-    # Install i18n catalog files.
-    sudo cp "$LANGS_DIR""/de/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/de/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/es/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/es/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/fr/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/fr/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/it/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/it/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/ja/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/ja/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/nl/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/nl/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/pt/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/pt/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-    sudo cp "$LANGS_DIR""/ru/LC_MESSAGES/""$LANGS_PREFIX"".mo" \
-        "$LANGS_TARGET""/ru/LC_MESSAGES/""$LANGS_PREFIX"".mo"
-
-    # Restart plasmashell.
-    kquitapp6 plasmashell 1>/dev/null
-    kstart plasmashell
-}
 
 
 # *****************************************************
@@ -61,7 +28,7 @@ kpackagetool6 -t Plasma/Applet -i inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
 INSTALLED=$?
 if [[ "$INSTALLED" == "0" ]]; then
-    doPlasmoidInstall
+    ./restartShell
     echo
     echo -e "${COLOR_GREEN}""Lightstrands installed." \
         "${COLOR_NORMAL}"
@@ -73,7 +40,7 @@ kpackagetool6 -t Plasma/Applet -u inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
 UPDATED=$?
 if [[ "$UPDATED" == "0" ]]; then
-    doPlasmoidInstall
+    ./restartShell
     echo
     echo -e "${COLOR_GREEN}""Lightstrands updated." \
         "${COLOR_NORMAL}"

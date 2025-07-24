@@ -7,12 +7,12 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
         name: "Lightstrands"
-        icon: "lightstrands"
+        icon: "braindump"
         source: "configLightstrands.qml"
     }
     ConfigCategory {
         name: i18n("Credits")
-        icon: "lightstrands-credits"
+        icon: "resource-group"
         source: "configCredits.qml"
     }
 }
