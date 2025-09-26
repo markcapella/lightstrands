@@ -7,7 +7,7 @@
 
     "KPlugin" : {
         "Id" : "inc.skyrmion.lightstrands",
-        "Icon" : "calligraflow",
+        "Icon" : "adjustrgb",
         "Category" : "Fun and Games",
 
         "Name" : "LightStrands",
