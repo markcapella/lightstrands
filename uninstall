@@ -32,7 +32,7 @@ if [[ $EXISTS_AS_DESKTOP_ITEM == "0" ]]; then
     echo "A Lightstrands widget is active on your desktop."
     echo -e "${COLOR_YELLOW}"
     echo "   You must remove it manually, before you can"
-    echo "uninstall it from the Widget Panel."\
+    echo -e "uninstall it from the Widget Panel."\
         "${COLOR_NORMAL}"
     exit 1
 fi

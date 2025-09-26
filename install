@@ -53,5 +53,5 @@ echo -e "${COLOR_RED}""Lightstrands cannot be installed."
 echo "   (kpackagetool6 error: ""$UPDATED "")."
 echo
 echo -e "${COLOR_YELLOW}""report bug to: "
-echo "   https://github.com/markcapella/lightstrands/issues/new"\
+echo -e "   https://github.com/markcapella/lightstrands/issues/new"\
     "${COLOR_NORMAL}"
