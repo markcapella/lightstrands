@@ -20,22 +20,21 @@ PlasmoidItem {
     compactRepresentation: LightStrands { }
     fullRepresentation: LightStrands { }
 
-    readonly property var mCFG:
-        plasmoid.configuration;
-
     width: {
-        if (mCFG.isModuleInitialized) {
+        const CFG = plasmoid.configuration;
+        if (CFG.isModuleInitialized) {
             return width;
         }
-        return (mCFG.initialOrientation == "horizontal") ?
-            mCFG.initialWidth : mCFG.initialHeight;
+        return (CFG.initialOrientation == "horizontal") ?
+            CFG.initialWidth : CFG.initialHeight;
     }
 
     height: {
-        if (mCFG.isModuleInitialized) {
+        const CFG = plasmoid.configuration;
+        if (CFG.isModuleInitialized) {
             return height;
         }
-        return (mCFG.initialOrientation == "horizontal") ?
-            mCFG.initialHeight : mCFG.initialWidth;
+        return (CFG.initialOrientation == "horizontal") ?
+            CFG.initialHeight : CFG.initialWidth;
     }
 }

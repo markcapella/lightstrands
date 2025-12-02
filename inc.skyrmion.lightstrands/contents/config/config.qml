@@ -12,7 +12,7 @@ ConfigModel {
     }
     ConfigCategory {
         name: i18n("Credits")
-        icon: "author"
+        icon: "user-idle"
         source: "configCredits.qml"
     }
 }

@@ -14,9 +14,9 @@ Item {
     anchors.fill: parent;
 
     Layout.minimumWidth:
-        Lights.getMinimumSquareCanvasSize();
+        Lights.getMinimumCanvasSize();
     Layout.minimumHeight:
-        Lights.getMinimumSquareCanvasSize();
+        Lights.getMinimumCanvasSize();
 
     Layout.maximumWidth: Infinity;
     Layout.maximumHeight: Infinity;
@@ -24,39 +24,19 @@ Item {
     readonly property var mCFG:
         plasmoid.configuration;
 
-    // Resize listeners.
-    property bool isResizing: false;
-    property var resizingStartTime;
-
-    onWidthChanged: {
-        if (!isResizing) {
-            if (isCanvasAvailable) {
-                Lights.clearCanvas();
-            }
-        }
-        isResizing = true;
-        resizingStartTime = Date.now();
-    }
-    onHeightChanged: {
-        if (!isResizing) {
-            if (isCanvasAvailable) {
-                Lights.clearCanvas();
-            }
-        }
-        isResizing = true;
-        resizingStartTime = Date.now();
-    }
-
     // Configuration pref change listener.
     property int chosenBulb:
         mCFG.chosenBulb;
 
     onChosenBulbChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbPositions();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listener.
@@ -64,11 +44,14 @@ Item {
         mCFG.bulbSpaceSlider;
 
     onBulbSpaceSliderChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbPositions();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listener.
@@ -76,11 +59,14 @@ Item {
         mCFG.strandSpaceSlider;
 
     onStrandSpaceSliderChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbPositions();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -88,11 +74,13 @@ Item {
         mCFG.showLightRed;
 
     onShowLightRedChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -100,11 +88,13 @@ Item {
         mCFG.showLightLime;
 
     onShowLightLimeChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -112,11 +102,13 @@ Item {
         mCFG.showLightPurple;
 
     onShowLightPurpleChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -124,11 +116,13 @@ Item {
         mCFG.showLightCyan;
 
     onShowLightCyanChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -136,11 +130,13 @@ Item {
         mCFG.showLightGreen;
 
     onShowLightGreenChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -148,11 +144,13 @@ Item {
         mCFG.showLightOrange;
 
     onShowLightOrangeChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -160,11 +158,13 @@ Item {
         mCFG.showLightBlue;
 
     onShowLightBlueChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     // Configuration pref change listeners.
@@ -172,11 +172,13 @@ Item {
         mCFG.showLightPink;
 
     onShowLightPinkChanged: {
-        if (isCanvasAvailable) {
-            Lights.clearCanvas();
-            Lights.initLightsModule();
-            mCanvas.requestPaint();
+        if (!isCanvasAvailable) {
+            return;
         }
+        Lights.clearCanvas();
+        Lights.setAllBulbColors();
+        Lights.setAllBulbsNeedDraw();
+        mCanvas.requestPaint();
     }
 
     /** ************************************************
@@ -198,9 +200,19 @@ Item {
 
         onAvailableChanged: {
             isCanvasAvailable = available;
+            if (!isCanvasAvailable) {
+                return;
+            }
+
+            // Canvas first-time initialization.
+            Lights.setAllBulbPositions();
+            Lights.setAllBulbColors();
+            Lights.setAllBulbsNeedDraw();
+
+            Lights.setModuleIsInitialized(true);
         }
         onPaint: {
-            Lights.drawCanvasFrame();
+            Lights.drawCanvas();
         }
     }
 
@@ -210,6 +222,30 @@ Item {
      ** This allows us to suppress jaggy draw frames
      ** during rapid applet resizes.
      **/
+    property var resizingStartTime;
+
+    onWidthChanged: {
+        if (!isCanvasAvailable) {
+            return;
+        }
+        if (!Lights.isModuleResizing()) {
+            Lights.clearCanvas();
+            Lights.setModuleIsResizing(true);
+        }
+        resizingStartTime = Date.now();
+    }
+
+    onHeightChanged: {
+        if (!isCanvasAvailable) {
+            return;
+        }
+        if (!Lights.isModuleResizing()) {
+            Lights.clearCanvas();
+            Lights.setModuleIsResizing(true);
+        }
+        resizingStartTime = Date.now();
+    }
+
     Item { Timer {
         id: resizingCancelTimer;
 
@@ -219,7 +255,7 @@ Item {
 
         onTriggered: {
             // Timer inactive.
-            if (!isResizing) {
+            if (!Lights.isModuleResizing()) {
                 return;
             }
 
@@ -229,17 +265,21 @@ Item {
                 resizingStartTime;
 
             if (DURATION < 0) {
-                Lights.initLightsModule();
+                Lights.setAllBulbPositions();
+                Lights.setAllBulbColors();
+                Lights.setAllBulbsNeedDraw();
                 mCanvas.requestPaint();
-                isResizing = false;
+                Lights.setModuleIsResizing(false);
                 return;
             }
 
             // Resizing stops after duration.
             if (DURATION > mCFG.resizingCancelTimeMS) {
-                Lights.initLightsModule();
+                Lights.setAllBulbPositions();
+                Lights.setAllBulbColors();
+                Lights.setAllBulbsNeedDraw();
                 mCanvas.requestPaint();
-                isResizing = false;
+                Lights.setModuleIsResizing(false);
                 return;
             }
         }
@@ -248,9 +288,7 @@ Item {
     /** ************************************************
      ** updateCanvasTimer timer definition.
      **
-     ** This allows us to suppress update/draw jag
-     ** while applet in editMode or user is drag-
-     ** selecting on the plasma desktop.
+     ** Performs periodic bulb-color changes.
      **/
     Item { Timer {
         id: updateCanvasTimer;
@@ -260,58 +298,26 @@ Item {
         running: true;
 
         onTriggered: {
-            if (!isCanvasAvailable) {
-                return;
-            }
-            // Desktop edit mode for "add widgets".
-            if (Plasmoid.containment.corona.editMode) {
-                return;
-            }
-            // User is changing prefs.
-            if (Plasmoid.userConfiguring) {
-                return;
-            }
-            // Long-press toolbar w/ handles.
-            if (isAppletInEditMode()) {
-                return;
-            }
-            // Plasmashell desktop rubberband.
-            if (isRubberBandActive()) {
-                return;
-            }
-            // Timer inactive.
-            if (isResizing) {
+            // No updates when resizing or canvas
+            // not yet drawn.
+            if (Lights.isModuleResizing() ||
+                !isCanvasAvailable) {
                 return;
             }
 
-            // Update lights / twinkle.
-            Lights.updateCanvasFrame();
+            // No updates when in "add widgets" Desktop
+            // editMode, or when Desktop rubberband selector
+            // being streched for desktop performance jag.
+            if (Plasmoid.containment.corona.editMode ||
+                isRubberBandActive()) {
+                return;
+            }
+
+            // Do the update.
+            Lights.updateCanvas();
             mCanvas.requestPaint();
         }
     }}
-
-    /** ************************************************
-     ** If applet in editMode, user could be dragging
-     ** or sizing it, so we skip color update draws to
-     ** avoid screen jag.
-     **/
-    property var editModeNode: null;
-    property bool editModeNodeSet: false;
-
-    function isAppletInEditMode() {
-        if (!editModeNodeSet) {
-            editModeNode = getEditNode();
-            editModeNodeSet = true;
-        }
-
-        return editModeNode ?
-            editModeNode.editMode : null;
-    }
-
-    function getEditNode() {
-        return getAncesterNode(lightstrands,
-            "BasicAppletContainer");
-    }
 
     /** ************************************************
      ** User click & dragging on desktop displays
@@ -319,8 +325,8 @@ Item {
      ** icons. This is also jaggy unless we avoid
      ** update draws.
      **/
-    property var rubberBandNode: null;
     property bool rubberBandNodeSet: false;
+    property var rubberBandNode: null;
 
     function isRubberBandActive() {
         if (!rubberBandNodeSet) {
@@ -333,33 +339,28 @@ Item {
     }
 
     function getRubberBandNode() {
-        const LAYOUT = getAncesterNode(
-            lightstrands, "AppletsLayout");
-        if (!LAYOUT) {
-            return null;
-        }
+        const APP = lightstrands;
 
-        const LOADER = getChildNode(
-            LAYOUT, "QQuickLoader");
-        if (!LOADER) {
-            return null;
-        }
+        const APPS = getParentOf(APP, "AppletsLayout");
+        if (!APPS) { return null; }
 
-        const FOLDERLAYER = getChildNode(
-            LOADER, "FolderViewLayer");
-        if (!FOLDERLAYER) {
-            return null;
-        }
+        const QL = getChildOf(APPS,"QQuickLoader");
+        if (!QL) { return null; }
 
-        return getChildNode(FOLDERLAYER,
-            "FolderView");
+        const FVL = getChildOf(QL, "FolderViewLayer");
+        if (!FVL) { return null; }
+
+        const FV = getChildOf(FVL, "FolderView");
+        if (!FV) { return null; }
+
+        return FV;
     }
 
     /** ************************************************
      ** Helper method to get an ancester of a
      ** node with a particular type.
      **/
-    function getAncesterNode(node, type) {
+    function getParentOf(node, type) {
         var temp = node;
 
         while (temp) {
@@ -376,13 +377,12 @@ Item {
      ** Helper method to get a child of a
      ** node with a particular type.
      **/
-    function getChildNode(node, type) {
+    function getChildOf(node, type) {
         for (var temp of node.children) {
             if (temp.toString().indexOf(type) != -1) {
                 return temp;
             }
         }
-
         return null;
     }
 }

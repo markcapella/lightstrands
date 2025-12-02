@@ -79,9 +79,9 @@ const DARK_GRAYED_RGBA = Qt.rgba(
 );
 
 // Bulb color types.
-const GRAYED = -1;
-
 const MAX_LIGHT_COLORS = 8;
+
+const GRAYED = -1;
 const RED = 0;
 const LIME = 1;
 const PURPLE = 2;
@@ -91,21 +91,8 @@ const ORANGE = 5;
 const BLUE = 6;
 const PINK = 7;
 
-/** ************************************************
- ** Module globals.
- **/
-
-// Bulb position, color, redraw attrs.
-var mLightXPos = [ ];
-var mLightYPos = [ ];
-
-var mBulbColorBright = [ ];
-var mBulbColorNormal = [ ];
-var mBulbColorDark = [ ];
-var mBulbNeedsRedraw = [ ];
-
 // Bulb shape list.
-var mLightBulbShapesList = [
+const mLightBulbShapesList = [
     AmericanBulb.BULB,
     BalloonsBulb.BULB,
     CandleBulb.BULB,
@@ -154,15 +141,24 @@ var mLightBulbShapesList = [
     XmasWreathBulb.BULB
 ];
 
-/** ************************************************
- ** This method initializes the module.
- **/
-function initLightsModule() {
-    setAllBulbPositions();
-    setAllBulbColors();
 
-    setIsModuleInitialized(true);
-}
+/** ************************************************
+ ** Module globals.
+ **/
+
+// Bulb position, color, redraw attrs.
+var mLightXPos = [ ];
+var mLightYPos = [ ];
+
+var mBulbColorBright = [ ];
+var mBulbColorNormal = [ ];
+var mBulbColorDark = [ ];
+
+var mBulbNeedsDraw = [ ];
+
+var mDebugMessagesCount = 0;
+var mIsModuleResizing = false;
+
 
 /** ************************************************
  ** This method sets each bulbs x/y positions.
@@ -299,7 +295,6 @@ function setAllBulbColors() {
     mBulbColorBright = [ ];
     mBulbColorNormal = [ ];
     mBulbColorDark = [ ];
-    mBulbNeedsRedraw = [ ];
 
     var colorIndex =
         getFirstActiveLightsColorIndex();
@@ -312,12 +307,23 @@ function setAllBulbColors() {
             getTwinkledNormal(colorIndex));
         mBulbColorDark.push(
             getTwinkledDark(colorIndex));
-        mBulbNeedsRedraw.push(true);
 
         if (colorIndex != GRAYED) {
             colorIndex =
                 getNextActiveLightsColorIndex(colorIndex);
         }
+    }
+}
+
+/** ************************************************
+ ** This method sets each bulbs draw state.
+ **/
+function setAllBulbsNeedDraw() {
+    mBulbNeedsDraw = [ ];
+
+    const BULB_COUNT = getBulbCount();
+    for (var i = 0; i < BULB_COUNT; i++) {
+        mBulbNeedsDraw.push(true);
     }
 }
 
@@ -665,24 +671,18 @@ function randomIntegerUpTo(max) {
  ** Minimum app canvas size. Provide largest square
  ** one bulb can fit into.
  **/
-function getMinimumSquareCanvasSize() {
+function getMinimumCanvasSize() {
     var resultSize = 0;
 
     for (const BULB of mLightBulbShapesList) {
-        const WIDTH = BULB.width +
-            getBulbSpace();
-        if (WIDTH > resultSize) {
-            resultSize = WIDTH;
-        }
+        const W = BULB.width + getBulbSpace();
+        const H = BULB.height + getStrandSpace();
 
-        const HEIGHT = BULB.height +
-            getStrandSpace();
-        if (HEIGHT > resultSize) {
-            resultSize = HEIGHT;
-        }
+        resultSize = (W > resultSize) ? W : resultSize;
+        resultSize = (H > resultSize) ? H : resultSize;
     }
 
-    return resultSize + 1;
+    return resultSize;
 }
 
 /** ************************************************
@@ -696,17 +696,17 @@ function clearCanvas() {
 /** ************************************************
  ** This method draws the entire canvas.
  **/
-function drawCanvasFrame() {
-    // First draw requires first init.
-    if (!getIsModuleInitialized()) {
-        initLightsModule();
+function drawCanvas() {
+    // Draws are ignored during re-sizing.
+    if (isModuleResizing()) {
+        return;
     }
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
-        if (mBulbNeedsRedraw[i] == true) {
+        if (mBulbNeedsDraw[i] == true) {
+            mBulbNeedsDraw[i] = false;
             drawBulb(i);
-            mBulbNeedsRedraw[i] = false;
         }
     }
 }
@@ -795,7 +795,7 @@ function getColorIndexFromBitmapAt(x, y) {
  ** This method updates the bulbs randomly to produce
  ** Twinkling effect. Change 1 out of 5 bulbs each time.
  **/
-function updateCanvasFrame() {
+function updateCanvas() {
     var colorIndex =
         getFirstActiveLightsColorIndex();
     if (colorIndex == GRAYED) {
@@ -811,7 +811,7 @@ function updateCanvasFrame() {
                 getTwinkledNormal(colorIndex);
             mBulbColorDark[i] =
                 getTwinkledDark(colorIndex);
-            mBulbNeedsRedraw[i] = true;
+            mBulbNeedsDraw[i] = true;
         }
         colorIndex =
             getNextActiveLightsColorIndex(colorIndex);
@@ -821,10 +821,20 @@ function updateCanvasFrame() {
 /** ************************************************
  ** Getter / Setters for module initialized value.
  **/
-function getIsModuleInitialized() {
+function isModuleResizing() {
+    return mIsModuleResizing;
+}
+function setModuleIsResizing(value) {
+    mIsModuleResizing = value;
+}
+
+/** ************************************************
+ ** Getter / Setters for module initialized value.
+ **/
+function isModuleInitialized() {
     return CFG.isModuleInitialized;
 }
-function setIsModuleInitialized(value) {
+function setModuleIsInitialized(value) {
     CFG.isModuleInitialized = value;
 }
 
@@ -835,7 +845,7 @@ function isStrandHorizontal() {
     return mCanvas.width > mCanvas.height;
 }
 function isStrandVertical() {
-    return mCanvas.height >= mCanvas.width;
+    return !isStrandHorizontal();
 }
 
 /** ************************************************
