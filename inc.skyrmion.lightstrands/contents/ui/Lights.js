@@ -156,9 +156,76 @@ var mBulbColorDark = [ ];
 
 var mBulbNeedsDraw = [ ];
 
-var mDebugMessagesCount = 0;
 var mIsModuleResizing = false;
 
+
+/** ************************************************
+ ** Getter / Setters for module initialized.
+ **/
+function isModuleInitialized() {
+    return CFG.isModuleInitialized;
+}
+function setModuleIsInitialized(value) {
+    CFG.isModuleInitialized = value;
+}
+
+/** ************************************************
+ ** Getter / Setters for strand orientation.
+ **/
+function isStrandHorizontal() {
+    return mCanvas.width > mCanvas.height;
+}
+function isStrandVertical() {
+    return !isStrandHorizontal();
+}
+
+/** ************************************************
+ ** Getter / Setters for module resizing.
+ **/
+function isModuleResizing() {
+    return mIsModuleResizing;
+}
+function setModuleIsResizing(value) {
+    mIsModuleResizing = value;
+}
+
+/** ************************************************
+ ** Getter for bulb spacing.
+ **/
+function getBulbSpace() {
+    return CFG.bulbSpaceSlider;
+}
+
+/** ************************************************
+ ** Getter for strand spacing.
+ **/
+function getStrandSpace() {
+    return CFG.strandSpaceSlider;
+}
+
+/** ************************************************
+ ** Getters for bulb shapes.
+ **/
+function getLightsShapeIndex() {
+    return CFG.chosenBulb;
+}
+
+function getLightsShape() {
+    return mLightBulbShapesList[
+        getLightsShapeIndex()];
+}
+
+function getLightsShapeId() {
+    return getLightsShape().id;
+}
+
+function getLightsShapeWidth() {
+    return getLightsShape().width;
+}
+
+function getLightsShapeHeight() {
+    return getLightsShape().height;
+}
 
 /** ************************************************
  ** This method sets each bulbs x/y positions.
@@ -316,14 +383,45 @@ function setAllBulbColors() {
 }
 
 /** ************************************************
- ** This method sets each bulbs draw state.
+ ** This method sets each bulbs draw state to true
+ ** to draw entire strand on next paint.
  **/
-function setAllBulbsNeedDraw() {
+function setAllBulbsNeedPaint() {
     mBulbNeedsDraw = [ ];
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
         mBulbNeedsDraw.push(true);
+    }
+}
+
+/** ************************************************
+ ** This method updates the bulbs randomly to
+ ** produce Twinkling effect.
+ **
+ ** Change 1 out of 5 bulbs on next paint.
+ ** 
+ **/
+function setSomeBulbsNeedPaint() {
+    var colorIndex =
+        getFirstActiveLightsColorIndex();
+    if (colorIndex == GRAYED) {
+        return;
+    }
+
+    const BULB_COUNT = getBulbCount();
+    for (var i = 0; i < BULB_COUNT; i++) {
+        if (randomIntegerUpTo(5) == 0) {
+            mBulbColorBright[i] =
+                getTwinkledBright(colorIndex);
+            mBulbColorNormal[i] =
+                getTwinkledNormal(colorIndex);
+            mBulbColorDark[i] =
+                getTwinkledDark(colorIndex);
+            mBulbNeedsDraw[i] = true;
+        }
+        colorIndex =
+            getNextActiveLightsColorIndex(colorIndex);
     }
 }
 
@@ -696,7 +794,7 @@ function clearCanvas() {
 /** ************************************************
  ** This method draws the entire canvas.
  **/
-function drawCanvas() {
+function paintCanvas() {
     // Draws are ignored during re-sizing.
     if (isModuleResizing()) {
         return;
@@ -789,99 +887,4 @@ function getColorIndexFromBitmapAt(x, y) {
 
     return getLightsShape().bitmap[y].
         substr(X_SUBSTR_POS, 1);
-}
-
-/** ************************************************
- ** This method updates the bulbs randomly to produce
- ** Twinkling effect. Change 1 out of 5 bulbs each time.
- **/
-function updateCanvas() {
-    var colorIndex =
-        getFirstActiveLightsColorIndex();
-    if (colorIndex == GRAYED) {
-        return;
-    }
-
-    const BULB_COUNT = getBulbCount();
-    for (var i = 0; i < BULB_COUNT; i++) {
-        if (randomIntegerUpTo(5) == 0) {
-            mBulbColorBright[i] =
-                getTwinkledBright(colorIndex);
-            mBulbColorNormal[i] =
-                getTwinkledNormal(colorIndex);
-            mBulbColorDark[i] =
-                getTwinkledDark(colorIndex);
-            mBulbNeedsDraw[i] = true;
-        }
-        colorIndex =
-            getNextActiveLightsColorIndex(colorIndex);
-    }
-}
-
-/** ************************************************
- ** Getter / Setters for module initialized value.
- **/
-function isModuleResizing() {
-    return mIsModuleResizing;
-}
-function setModuleIsResizing(value) {
-    mIsModuleResizing = value;
-}
-
-/** ************************************************
- ** Getter / Setters for module initialized value.
- **/
-function isModuleInitialized() {
-    return CFG.isModuleInitialized;
-}
-function setModuleIsInitialized(value) {
-    CFG.isModuleInitialized = value;
-}
-
-/** ************************************************
- ** Getter / Setters for strand orientation.
- **/
-function isStrandHorizontal() {
-    return mCanvas.width > mCanvas.height;
-}
-function isStrandVertical() {
-    return !isStrandHorizontal();
-}
-
-/** ************************************************
- ** Getter for bulb spacing.
- **/
-function getBulbSpace() {
-    return CFG.bulbSpaceSlider;
-}
-
-/** ************************************************
- ** Getter for strand spacing.
- **/
-function getStrandSpace() {
-    return CFG.strandSpaceSlider;
-}
-
-/** ************************************************
- ** Getters for bulb shapes.
- **/
-function getLightsShapeIndex() {
-    return CFG.chosenBulb;
-}
-
-function getLightsShape() {
-    return mLightBulbShapesList[
-        getLightsShapeIndex()];
-}
-
-function getLightsShapeId() {
-    return getLightsShape().id;
-}
-
-function getLightsShapeWidth() {
-    return getLightsShape().width;
-}
-
-function getLightsShapeHeight() {
-    return getLightsShape().height;
 }

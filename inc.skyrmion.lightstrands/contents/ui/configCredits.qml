@@ -26,11 +26,23 @@ KCM.SimpleKCM {
             horizontalAlignment: Text.AlignHCenter;
             text: i18n("were developed from images located at");
         }
-        QtControls.Label {
+
+        Text {
             Layout.fillWidth: true;
             horizontalAlignment: Text.AlignHCenter;
-            font.weight: Font.Bold;
-            text: i18n("https://www.flaticon.com/");
+
+            text: '<a href="#">https://www.flaticon.com/</a>.';
+            textFormat: Text.RichText;
+
+            onLinkActivated: Qt.openUrlExternally(
+                "https://www.flaticon.com/");
+
+            MouseArea {
+                anchors.fill: parent;
+                acceptedButtons: Qt.NoButton;
+                cursorShape: parent.hoveredLink ?
+                    Qt.PointingHandCursor : Qt.ArrowCursor;
+            }
         }
 
         Item {

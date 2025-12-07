@@ -13,12 +13,11 @@ PlasmoidItem {
         PlasmaCore.Types.NoBackground |
         PlasmaCore.Types.ConfigurableBackground;
 
-    preferredRepresentation: compactRepresentation;
     toolTipMainText: Plasmoid.metaData.name;
     toolTipSubText: Plasmoid.metaData.description;
 
-    compactRepresentation: LightStrands { }
     fullRepresentation: LightStrands { }
+    compactRepresentation: LightStrands { }
 
     width: {
         const CFG = plasmoid.configuration;

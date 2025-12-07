@@ -23,16 +23,6 @@ LANGS_TARGET="/usr/share/locale"
 # Main proces.
 #
 
-# Required to remove all before install.
-./uninstall
-UNINSTALLED=$?
-if [[ "$UNINSTALLED" != "0" ]]; then
-    echo
-    echo -e "${COLOR_RED}""Lightstrands NOT installed." \
-        "${COLOR_NORMAL}"
-    exit 1
-fi
-
 # Try to install the package.
 kpackagetool6 -t Plasma/Applet -i inc.skyrmion.lightstrands \
     1>/dev/null 2>/dev/null
