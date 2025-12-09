@@ -141,6 +141,8 @@ const mLightBulbShapesList = [
     XmasWreathBulb.BULB
 ];
 
+const ODDS_OF_UPDATE = 5;
+
 
 /** ************************************************
  ** Module globals.
@@ -411,7 +413,7 @@ function setSomeBulbsNeedPaint() {
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
-        if (randomIntegerUpTo(5) == 0) {
+        if (randomIntUpTo(ODDS_OF_UPDATE) == 0) {
             mBulbColorBright[i] =
                 getTwinkledBright(colorIndex);
             mBulbColorNormal[i] =
@@ -747,9 +749,9 @@ function getTwinkledColorFrom(r, g, b) {
 function getFuzzyRGBValueFrom(midpoint) {
     const RANGE = 45;
 
-    const VALUE = randomIntegerUpTo(2) == 0 ?
-        midpoint + randomIntegerUpTo(RANGE) :
-        midpoint - randomIntegerUpTo(RANGE);
+    const VALUE = randomIntUpTo(2) == 0 ?
+        midpoint + randomIntUpTo(RANGE) :
+        midpoint - randomIntUpTo(RANGE);
 
     return Math.min(Math.max(VALUE, 0x00), 0xff);
 }
@@ -758,7 +760,7 @@ function getFuzzyRGBValueFrom(midpoint) {
  ** This method returns a whole number from 0 up to
  ** but not including the max.
  **/
-function randomIntegerUpTo(max) {
+function randomIntUpTo(max) {
     if (max <= 0) {
         return 0;
     }
@@ -776,8 +778,10 @@ function getMinimumCanvasSize() {
         const W = BULB.width + getBulbSpace();
         const H = BULB.height + getStrandSpace();
 
-        resultSize = (W > resultSize) ? W : resultSize;
-        resultSize = (H > resultSize) ? H : resultSize;
+        resultSize = (W > resultSize) ?
+            W : resultSize;
+        resultSize = (H > resultSize) ?
+            H : resultSize;
     }
 
     return resultSize;
@@ -817,12 +821,19 @@ function drawBulb(bulbIndex) {
     CC.lineWidth = 1;
 
     // Loop through bitmap.
-    for (var w = 0; w < getLightsShapeWidth(); w++) {
-        for (var h = 0; h < getLightsShapeHeight(); h++) {
-            // Get color from bitmap.
-            const bitmapColor = getColorFromBitmapAt(w, h);
+    const MAX_HEIGHT = getLightsShapeHeight();
+    for (var h = 0; h < MAX_HEIGHT; h++) {
 
-            // None doesn't render.
+        const ACT_WIDTH = getLightsShape().
+            bitmap[h].length;
+        const MAX_WIDTH = getLightsShapeWidth();
+
+        for (var w = 0; w < ACT_WIDTH &&
+            w < MAX_WIDTH; w++) {
+
+            // Get renderable color from bitmap.
+            const bitmapColor =
+                getColorFromBitmapAt(w, h);
             if (bitmapColor == "None") {
                 continue;
             }
@@ -883,8 +894,6 @@ function getColorFromBitmapAt(x, y) {
  ** pixel at x,y in the bitmap.
  **/
 function getColorIndexFromBitmapAt(x, y) {
-    const X_SUBSTR_POS = x % getLightsShapeWidth();
-
     return getLightsShape().bitmap[y].
-        substr(X_SUBSTR_POS, 1);
+        substr(x, 1);
 }

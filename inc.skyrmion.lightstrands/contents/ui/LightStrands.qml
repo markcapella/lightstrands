@@ -9,8 +9,6 @@ import "Lights.js" as Lights;
 
 Item {
     id: lightstrands
-
-    // Form bounds.
     anchors.fill: parent;
 
     Layout.minimumWidth: Lights.getMinimumCanvasSize();
@@ -19,12 +17,9 @@ Item {
     Layout.maximumWidth: Infinity;
     Layout.maximumHeight: Infinity;
 
-    readonly property var mCFG: plasmoid.configuration;
-
     /** ************************************************
      ** onDestruction listener.
      **/
-
     Component.onDestruction: {
         updateCanvasTimer.stop();
         resizingCancelTimer.stop();
@@ -33,38 +28,30 @@ Item {
     /** ************************************************
      ** Configuration pref change listeners.
      **/
+    readonly property var mCFG: plasmoid.configuration;
 
     property int chosenBulb: mCFG.chosenBulb;
-    onChosenBulbChanged: handleAllPrefChanges();
-
     property int bulbSpaceSlider: mCFG.bulbSpaceSlider;
-    onBulbSpaceSliderChanged: handleAllPrefChanges();
-
     property int strandSpaceSlider: mCFG.strandSpaceSlider;
-    onStrandSpaceSliderChanged: handleAllPrefChanges();
-
     property bool showLightRed: mCFG.showLightRed;
-    onShowLightRedChanged: handleColorPrefChanges();
-
     property bool showLightLime: mCFG.showLightLime;
-    onShowLightLimeChanged: handleColorPrefChanges();
-
     property bool showLightPurple: mCFG.showLightPurple;
-    onShowLightPurpleChanged: handleColorPrefChanges();
-
     property bool showLightCyan: mCFG.showLightCyan;
-    onShowLightCyanChanged: handleColorPrefChanges();
-
     property bool showLightGreen: mCFG.showLightGreen;
-    onShowLightGreenChanged: handleColorPrefChanges();
-
     property bool showLightOrange: mCFG.showLightOrange;
-    onShowLightOrangeChanged: handleColorPrefChanges();
-
     property bool showLightBlue: mCFG.showLightBlue;
-    onShowLightBlueChanged: handleColorPrefChanges();
-
     property bool showLightPink: mCFG.showLightPink;
+
+    onChosenBulbChanged: handleAllPrefChanges();
+    onBulbSpaceSliderChanged: handleAllPrefChanges();
+    onStrandSpaceSliderChanged: handleAllPrefChanges();
+    onShowLightRedChanged: handleColorPrefChanges();
+    onShowLightLimeChanged: handleColorPrefChanges();
+    onShowLightPurpleChanged: handleColorPrefChanges();
+    onShowLightCyanChanged: handleColorPrefChanges();
+    onShowLightGreenChanged: handleColorPrefChanges();
+    onShowLightOrangeChanged: handleColorPrefChanges();
+    onShowLightBlueChanged: handleColorPrefChanges();
     onShowLightPinkChanged: handleColorPrefChanges();
 
     // All prefs changes initialization helper.
@@ -91,7 +78,6 @@ Item {
     /** ************************************************
      ** Canvas definition.
      **/
-
     property bool isCanvasAvailable: false;
     property var screenModel: "";
 
@@ -120,7 +106,6 @@ Item {
      ** This allows us to suppress jaggy draw frames
      ** during rapid applet resizes.
      **/
-
     onWidthChanged: handleResizeStart();
     onHeightChanged: handleResizeStart();
 
@@ -139,8 +124,8 @@ Item {
     Item { Timer {
         id: resizingCancelTimer;
 
-        interval: 100;
         repeat: true;
+        interval: 100;
         running: true;
 
         onTriggered: {
@@ -173,12 +158,11 @@ Item {
      ** or when Desktop rubberband selector is being
      ** streched. (Avoid desktop jag).
      **/
-
     Item { Timer {
         id: updateCanvasTimer;
 
-        interval: 500;
         repeat: true;
+        interval: 500;
         running: true;
 
         onTriggered: {
@@ -209,7 +193,6 @@ Item {
      ** icons. This is also jaggy unless we avoid
      ** update draws.
      **/
-
     property var rubberBandNode: null;
 
     function isRubberBandActive() {
@@ -237,7 +220,6 @@ Item {
      ** Helper method to get an ancester of a
      ** node with a particular type.
      **/
-
     function getParentOf(node, type) {
         var temp = node;
 
@@ -255,7 +237,6 @@ Item {
      ** Helper method to get a child of a
      ** node with a particular type.
      **/
-
     function getChildOf(node, type) {
         for (var temp of node.children) {
             if (temp.toString().indexOf(type) >= 0) {
