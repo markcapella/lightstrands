@@ -141,8 +141,6 @@ const mLightBulbShapesList = [
     XmasWreathBulb.BULB
 ];
 
-const ODDS_OF_UPDATE = 5;
-
 
 /** ************************************************
  ** Module globals.
@@ -400,11 +398,12 @@ function setAllBulbsNeedPaint() {
 /** ************************************************
  ** This method updates the bulbs randomly to
  ** produce Twinkling effect.
- **
- ** Change 1 out of 5 bulbs on next paint.
- ** 
  **/
 function setSomeBulbsNeedPaint() {
+    if (CFG.blinkCountSlider == 0) {
+        return;
+    }
+
     var colorIndex =
         getFirstActiveLightsColorIndex();
     if (colorIndex == GRAYED) {
@@ -413,7 +412,8 @@ function setSomeBulbsNeedPaint() {
 
     const BULB_COUNT = getBulbCount();
     for (var i = 0; i < BULB_COUNT; i++) {
-        if (randomIntUpTo(ODDS_OF_UPDATE) == 0) {
+        if (randomIntUpTo(100) <
+            CFG.blinkCountSlider) {
             mBulbColorBright[i] =
                 getTwinkledBright(colorIndex);
             mBulbColorNormal[i] =
@@ -428,7 +428,7 @@ function setSomeBulbsNeedPaint() {
 }
 
 /** ************************************************
- ** This method returns the number of bulbs in the strand.
+ ** This method returns number of bulbs in strand.
  **/
 function getBulbCount() {
     return isStrandHorizontal() ?
@@ -437,7 +437,7 @@ function getBulbCount() {
 }
 
 /** ************************************************
- ** This method returns the number of bulbs in the strand
+ ** This method returns number of bulbs in strand
  ** for horizontally oriented light strands.
  **/
 function getHorizontalBulbCount() {

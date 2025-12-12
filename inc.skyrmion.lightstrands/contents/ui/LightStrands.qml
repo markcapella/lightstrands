@@ -31,6 +31,7 @@ Item {
     readonly property var mCFG: plasmoid.configuration;
 
     property int chosenBulb: mCFG.chosenBulb;
+
     property int bulbSpaceSlider: mCFG.bulbSpaceSlider;
     property int strandSpaceSlider: mCFG.strandSpaceSlider;
     property bool showLightRed: mCFG.showLightRed;
@@ -45,6 +46,7 @@ Item {
     onChosenBulbChanged: handleAllPrefChanges();
     onBulbSpaceSliderChanged: handleAllPrefChanges();
     onStrandSpaceSliderChanged: handleAllPrefChanges();
+
     onShowLightRedChanged: handleColorPrefChanges();
     onShowLightLimeChanged: handleColorPrefChanges();
     onShowLightPurpleChanged: handleColorPrefChanges();
@@ -124,9 +126,9 @@ Item {
     Item { Timer {
         id: resizingCancelTimer;
 
+        running: true;
         repeat: true;
         interval: 100;
-        running: true;
 
         onTriggered: {
             // Timer inactive.
@@ -161,9 +163,9 @@ Item {
     Item { Timer {
         id: updateCanvasTimer;
 
-        repeat: true;
-        interval: 500;
         running: true;
+        repeat: true;
+        interval: mCFG.blinkRateSlider;
 
         onTriggered: {
             if (Lights.isModuleResizing() ||

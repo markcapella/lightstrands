@@ -21,6 +21,11 @@ KCM.SimpleKCM {
     property alias cfg_strandSpaceSlider:
         strandSpaceSlider.value;
 
+    property alias cfg_blinkRateSlider:
+        blinkRateSlider.value;
+    property alias cfg_blinkCountSlider:
+        blinkCountSlider.value;
+
     property alias cfg_showLightRed: showLightRed.checked;
     property alias cfg_showLightLime: showLightLime.checked;
     property alias cfg_showLightPurple: showLightPurple.checked;
@@ -98,40 +103,102 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Kirigami.FormData.label: i18n("Bulb Spacing");
+            Kirigami.FormData.label: i18n("Bulb Positioning");
             Kirigami.FormData.isSection: true;
         }
 
         RowLayout {
             Layout.fillWidth: true;
 
+            Text {
+                text: "Bulb Spacing     : ";
+            }
             QtControls.Slider {
                 id: bulbSpaceSlider;
                 Layout.fillWidth: true;
+                width: 500;
                 from: 0;
                 to: 50;
                 stepSize: 1;
             }
+            QtControls.ToolTip {
+                parent: bulbSpaceSlider.handle;
+                text: bulbSpaceSlider.value.toFixed(0);
+                visible: bulbSpaceSlider.hovered ||
+                    bulbSpaceSlider.pressed;
+            }
         }
 
+        RowLayout {
+            Layout.fillWidth: true;
+
+            Text {
+                text: "Strand Spacing : ";
+            }
+            QtControls.Slider {
+                id: strandSpaceSlider;
+                Layout.fillWidth: true;
+                width: 500;
+                from: 0;
+                to: 50;
+                stepSize: 1;
+            }
+            QtControls.ToolTip {
+                parent: strandSpaceSlider.handle;
+                text: strandSpaceSlider.value.toFixed(0);
+                visible: strandSpaceSlider.hovered ||
+                    strandSpaceSlider.pressed;
+            }
+        }
 
         Item {
-            Kirigami.FormData.label: i18n("Strand Spacing");
+            Kirigami.FormData.label: i18n("Bulb Blinking");
             Kirigami.FormData.isSection: true;
         }
 
         RowLayout {
             Layout.fillWidth: true;
 
+            Text {
+                text: "Blink Delay        : ";
+            }
             QtControls.Slider {
-                id: strandSpaceSlider;
+                id: blinkRateSlider;
                 Layout.fillWidth: true;
-                from: 0;
-                to: 50;
-                stepSize: 1;
+                width: 500;
+                from: 100;
+                to: 5000;
+                stepSize: 50;
+            }
+            QtControls.ToolTip {
+                parent: blinkRateSlider.handle;
+                text: blinkRateSlider.value.toFixed(0) + " ms";
+                visible: blinkRateSlider.hovered ||
+                    blinkRateSlider.pressed;
             }
         }
 
+        RowLayout {
+            Layout.fillWidth: true;
+
+            Text {
+                text: "Blink Count       : ";
+            }
+            QtControls.Slider {
+                id: blinkCountSlider;
+                Layout.fillWidth: true;
+                width: 500;
+                from: 0;
+                to: 100;
+                stepSize: 5;
+            }
+            QtControls.ToolTip {
+                parent: blinkCountSlider.handle;
+                text: blinkCountSlider.value.toFixed(0);
+                visible: blinkCountSlider.hovered ||
+                    blinkCountSlider.pressed;
+            }
+        }
 
         Item {
             Kirigami.FormData.label: i18n("Bulb Colors");

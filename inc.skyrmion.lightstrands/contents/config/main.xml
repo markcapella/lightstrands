@@ -41,6 +41,14 @@
       <default>15</default>
     </entry>
 
+    <!-- Bulb timing prefs. -->
+    <entry name="blinkRateSlider" type="Int">
+      <default>750</default>
+    </entry>
+    <entry name="blinkCountSlider" type="Int">
+      <default>20</default>
+    </entry>
+
     <!-- Bulb Colors prefs. -->
     <entry name="showLightRed" type="Bool">
       <default>true</default>
